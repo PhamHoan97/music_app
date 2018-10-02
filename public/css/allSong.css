@@ -1,0 +1,70 @@
+.color ul li {
+	border: none;
+	margin: none;
+
+}
+.color ul{
+	list-style: none;
+	padding: 0px;
+}
+.color li{
+	height: 10px;
+	width: 16.66666667%;
+	float: left;
+}
+.banner{
+	background: url(../images/pexels-photo.jpg) no-repeat;
+	background-size: cover;
+}
+
+.card{
+	margin: 15px 0px;
+}
+.card-button{
+	text-align: center;	
+}
+.card-button > a{
+	margin: 0px 5px;
+}
+.btn{
+	border-radius: 5px;
+}
+.button--add:hover{
+	background-color: white;
+	color: #007bff;
+	border: 1px solid #007bff;
+}
+.button--delete:hover{
+	background-color: white;
+	color: #dc3545;
+	border: 1px solid #dc3545;
+}
+.input-file{
+	display: none;
+}
+.banner{
+	color: white;
+}
+.banner--title{
+	margin: 30px 0px;
+}
+.form-center{
+	background-color: white;
+	padding: 30px;
+	color: black;
+}
+.form--cover{
+	border: 5px dashed #dce0e2;
+}
+.form--cover__main > form > label {
+	padding: 0px 100px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.form--cover img{
+	cursor: pointer;
+	vertical-align: middle;
+}
+.form--cover__title h5{
+	opacity: 0.6;
+}
