@@ -43,6 +43,7 @@ Route::get('notifications', function () {
     return view('APP.notifications');
 });
 
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -56,3 +57,4 @@ Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider');
 Route::get('{provider}/callback', 'Auth\LoginController@handleProviderCallback');
 
 Route::post('sendemail','SendEmail@adminSendEmail')->name('sendemail');
+
