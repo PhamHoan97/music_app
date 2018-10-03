@@ -78,21 +78,7 @@
             @endif
 
             <div class="content">
-<<<<<<< HEAD
 
-=======
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
->>>>>>> 3604f6e6fba7faceb2c6b06bb5a6a8ae9231d5ba
             </div>
         </div>
     </body>

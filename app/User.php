@@ -15,9 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-
         'name', 'email', 'password', 'provider', 'provider_id',
-
     ];
 
     /**
@@ -32,5 +30,4 @@ class User extends Authenticatable
     public $table = "users";
 
     public $timestamps = false;
-
 }
