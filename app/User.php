@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'provider', 'provider_id',
+        'username', 'password', 'provider', 'provider_id', 'email', 'category', 'tbl_account_detail'
     ];
 
     /**
@@ -27,7 +27,7 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public $table = "users";
+    public $table = "tbl_accounts";
 
     public $timestamps = false;
 }
