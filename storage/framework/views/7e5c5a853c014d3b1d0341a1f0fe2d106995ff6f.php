@@ -49,7 +49,7 @@
                         <?php else: ?>
                             <li class="dropdown" style=" width: 160px;">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
-                                    <?php echo e(Auth::user()->name); ?> <span class="caret"></span>
+                                    <?php echo e(Auth::user()->username); ?> <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu">

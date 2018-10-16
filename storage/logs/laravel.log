@@ -9809,3 +9809,1161 @@ Stack trace:
 #15 /var/www/html/musicapp2018/public/index.php(60): Illuminate\\Foundation\\Http\\Kernel->terminate(Object(Illuminate\\Http\\Request), Object(Illuminate\\Http\\Response))
 #16 {main}
 "} 
+[2018-10-15 23:02:39] local.ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'music_app.migrations' doesn't exist (SQL: select max(`batch`) as aggregate from `migrations`) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'music_app.migrations' doesn't exist (SQL: select max(`batch`) as aggregate from `migrations`) at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:664, PDOException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'music_app.migrations' doesn't exist at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:326)
+[stacktrace]
+#0 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('select max(`bat...', Array, Object(Closure))
+#1 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(333): Illuminate\\Database\\Connection->run('select max(`bat...', Array, Object(Closure))
+#2 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(1719): Illuminate\\Database\\Connection->select('select max(`bat...', Array, false)
+#3 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(1704): Illuminate\\Database\\Query\\Builder->runSelect()
+#4 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2051): Illuminate\\Database\\Query\\Builder->get(Array)
+#5 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2001): Illuminate\\Database\\Query\\Builder->aggregate('max', Array)
+#6 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(125): Illuminate\\Database\\Query\\Builder->max('batch')
+#7 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(78): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->getLastBatchNumber()
+#8 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(223): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->getLast()
+#9 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(201): Illuminate\\Database\\Migrations\\Migrator->getMigrationsForRollback(Array)
+#10 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/RollbackCommand.php(63): Illuminate\\Database\\Migrations\\Migrator->rollback(Array, Array)
+#11 [internal function]: Illuminate\\Database\\Console\\Migrations\\RollbackCommand->handle()
+#12 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#13 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#14 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#15 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#16 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#17 /var/www/html/musicapp2018/vendor/symfony/console/Command/Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#18 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#19 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(946): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#20 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(248): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\RollbackCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#21 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 /var/www/html/musicapp2018/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 {main}
+"} 
+[2018-10-15 23:03:25] local.ERROR: Command "db:seeder" is not defined.
+
+Did you mean one of these?
+    db:seed
+    make:seeder {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"db:seeder\" is not defined.
+
+Did you mean one of these?
+    db:seed
+    make:seeder at /var/www/html/musicapp2018/vendor/symfony/console/Application.php:618)
+[stacktrace]
+#0 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(229): Symfony\\Component\\Console\\Application->find('db:seeder')
+#1 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /var/www/html/musicapp2018/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2018-10-15 23:03:29] local.ERROR: Class UsersTable does not exist {"exception":"[object] (ReflectionException(code: -1): Class UsersTable does not exist at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/Container.php:752)
+[stacktrace]
+#0 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/Container.php(752): ReflectionClass->__construct('UsersTable')
+#1 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/Container.php(631): Illuminate\\Container\\Container->build('UsersTable')
+#2 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/Container.php(586): Illuminate\\Container\\Container->resolve('UsersTable', Array)
+#3 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(732): Illuminate\\Container\\Container->make('UsersTable', Array)
+#4 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(68): Illuminate\\Foundation\\Application->make('UsersTable')
+#5 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(42): Illuminate\\Database\\Seeder->resolve('UsersTable')
+#6 /var/www/html/musicapp2018/database/seeds/DatabaseSeeder.php(14): Illuminate\\Database\\Seeder->call('UsersTable')
+#7 [internal function]: DatabaseSeeder->run()
+#8 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#9 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#10 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#11 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#12 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(122): Illuminate\\Container\\Container->call(Array)
+#13 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Console/Seeds/SeedCommand.php(63): Illuminate\\Database\\Seeder->__invoke()
+#14 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/GuardsAttributes.php(122): Illuminate\\Database\\Console\\Seeds\\SeedCommand->Illuminate\\Database\\Console\\Seeds\\{closure}()
+#15 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Console/Seeds/SeedCommand.php(64): Illuminate\\Database\\Eloquent\\Model::unguarded(Object(Closure))
+#16 [internal function]: Illuminate\\Database\\Console\\Seeds\\SeedCommand->handle()
+#17 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#18 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#19 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#20 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#21 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#22 /var/www/html/musicapp2018/vendor/symfony/console/Command/Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#23 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#24 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(946): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(248): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Seeds\\SeedCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 /var/www/html/musicapp2018/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 {main}
+"} 
+[2018-10-16 13:55:22] local.ERROR: Command "make:migrate" is not defined.
+
+Did you mean one of these?
+    make:auth
+    make:command
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make:migrate\" is not defined.
+
+Did you mean one of these?
+    make:auth
+    make:command
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test at /var/www/html/musicapp2018/vendor/symfony/console/Application.php:618)
+[stacktrace]
+#0 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(229): Symfony\\Component\\Console\\Application->find('make:migrate')
+#1 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /var/www/html/musicapp2018/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2018-10-16 18:37:11] local.ERROR: SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint (SQL: alter table `tbl_accounts` add constraint `tbl_accounts_id_category_foreign` foreign key (`id_category`) references `category` (`id_category`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: HY000): SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint (SQL: alter table `tbl_accounts` add constraint `tbl_accounts_id_category_foreign` foreign key (`id_category`) references `category` (`id_category`)) at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:664, PDOException(code: HY000): SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:458)
+[stacktrace]
+#0 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `tb...', Array, Object(Closure))
+#1 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(459): Illuminate\\Database\\Connection->run('alter table `tb...', Array, Object(Closure))
+#2 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(86): Illuminate\\Database\\Connection->statement('alter table `tb...')
+#3 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(252): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(165): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(221): Illuminate\\Database\\Schema\\Builder->create('tbl_accounts', Object(Closure))
+#6 /var/www/html/musicapp2018/database/migrations/2018_10_15_222649_create_tbl_account.php(27): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(359): CreateTblAccount->up()
+#8 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(366): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(177): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateTblAccount), 'up')
+#10 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(146): Illuminate\\Database\\Migrations\\Migrator->runUp('/var/www/html/m...', 1, false)
+#11 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(95): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(69): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#19 /var/www/html/musicapp2018/vendor/symfony/console/Command/Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#20 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(946): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(248): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 /var/www/html/musicapp2018/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2018-10-16 18:39:07] local.ERROR: SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint (SQL: alter table `tbl_accounts` add constraint `tbl_accounts_id_category_foreign` foreign key (`id_category`) references `category` (`id_category`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: HY000): SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint (SQL: alter table `tbl_accounts` add constraint `tbl_accounts_id_category_foreign` foreign key (`id_category`) references `category` (`id_category`)) at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:664, PDOException(code: HY000): SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:458)
+[stacktrace]
+#0 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `tb...', Array, Object(Closure))
+#1 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(459): Illuminate\\Database\\Connection->run('alter table `tb...', Array, Object(Closure))
+#2 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(86): Illuminate\\Database\\Connection->statement('alter table `tb...')
+#3 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(252): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(165): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(221): Illuminate\\Database\\Schema\\Builder->create('tbl_accounts', Object(Closure))
+#6 /var/www/html/musicapp2018/database/migrations/2018_10_15_222649_create_tbl_account.php(27): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(359): CreateTblAccount->up()
+#8 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(366): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(177): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateTblAccount), 'up')
+#10 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(146): Illuminate\\Database\\Migrations\\Migrator->runUp('/var/www/html/m...', 1, false)
+#11 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(95): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(69): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#19 /var/www/html/musicapp2018/vendor/symfony/console/Command/Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#20 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(946): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(248): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 /var/www/html/musicapp2018/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2018-10-16 18:40:06] local.ERROR: SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint (SQL: alter table `tbl_accounts` add constraint `tbl_accounts_id_category_foreign` foreign key (`id_category`) references `category` (`id_category`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: HY000): SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint (SQL: alter table `tbl_accounts` add constraint `tbl_accounts_id_category_foreign` foreign key (`id_category`) references `category` (`id_category`)) at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:664, PDOException(code: HY000): SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:458)
+[stacktrace]
+#0 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `tb...', Array, Object(Closure))
+#1 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(459): Illuminate\\Database\\Connection->run('alter table `tb...', Array, Object(Closure))
+#2 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(86): Illuminate\\Database\\Connection->statement('alter table `tb...')
+#3 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(252): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(165): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(221): Illuminate\\Database\\Schema\\Builder->create('tbl_accounts', Object(Closure))
+#6 /var/www/html/musicapp2018/database/migrations/2018_10_15_222649_create_tbl_account.php(27): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(359): CreateTblAccount->up()
+#8 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(366): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(177): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateTblAccount), 'up')
+#10 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(146): Illuminate\\Database\\Migrations\\Migrator->runUp('/var/www/html/m...', 1, false)
+#11 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(95): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(69): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#19 /var/www/html/musicapp2018/vendor/symfony/console/Command/Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#20 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(946): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(248): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 /var/www/html/musicapp2018/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2018-10-16 18:43:13] local.ERROR: Command "db:seeder" is not defined.
+
+Did you mean one of these?
+    db:seed
+    make:seeder {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"db:seeder\" is not defined.
+
+Did you mean one of these?
+    db:seed
+    make:seeder at /var/www/html/musicapp2018/vendor/symfony/console/Application.php:618)
+[stacktrace]
+#0 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(229): Symfony\\Component\\Console\\Application->find('db:seeder')
+#1 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /var/www/html/musicapp2018/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2018-10-16 18:51:08] local.ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'music_app.migrations' doesn't exist (SQL: select max(`batch`) as aggregate from `migrations`) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'music_app.migrations' doesn't exist (SQL: select max(`batch`) as aggregate from `migrations`) at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:664, PDOException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'music_app.migrations' doesn't exist at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:326)
+[stacktrace]
+#0 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('select max(`bat...', Array, Object(Closure))
+#1 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(333): Illuminate\\Database\\Connection->run('select max(`bat...', Array, Object(Closure))
+#2 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(1719): Illuminate\\Database\\Connection->select('select max(`bat...', Array, false)
+#3 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(1704): Illuminate\\Database\\Query\\Builder->runSelect()
+#4 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2051): Illuminate\\Database\\Query\\Builder->get(Array)
+#5 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2001): Illuminate\\Database\\Query\\Builder->aggregate('max', Array)
+#6 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(125): Illuminate\\Database\\Query\\Builder->max('batch')
+#7 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(78): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->getLastBatchNumber()
+#8 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(223): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->getLast()
+#9 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(201): Illuminate\\Database\\Migrations\\Migrator->getMigrationsForRollback(Array)
+#10 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/RollbackCommand.php(63): Illuminate\\Database\\Migrations\\Migrator->rollback(Array, Array)
+#11 [internal function]: Illuminate\\Database\\Console\\Migrations\\RollbackCommand->handle()
+#12 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#13 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#14 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#15 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#16 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#17 /var/www/html/musicapp2018/vendor/symfony/console/Command/Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#18 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#19 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(946): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#20 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(248): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\RollbackCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#21 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 /var/www/html/musicapp2018/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 {main}
+"} 
+[2018-10-16 18:53:00] local.ERROR: SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint (SQL: alter table `tbl_accounts` add constraint `tbl_accounts_category_foreign` foreign key (`category`) references `category` (`code_category`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: HY000): SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint (SQL: alter table `tbl_accounts` add constraint `tbl_accounts_category_foreign` foreign key (`category`) references `category` (`code_category`)) at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:664, PDOException(code: HY000): SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:458)
+[stacktrace]
+#0 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `tb...', Array, Object(Closure))
+#1 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(459): Illuminate\\Database\\Connection->run('alter table `tb...', Array, Object(Closure))
+#2 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(86): Illuminate\\Database\\Connection->statement('alter table `tb...')
+#3 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(252): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(165): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(221): Illuminate\\Database\\Schema\\Builder->create('tbl_accounts', Object(Closure))
+#6 /var/www/html/musicapp2018/database/migrations/2018_10_15_222649_create_tbl_account.php(27): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(359): CreateTblAccount->up()
+#8 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(366): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(177): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateTblAccount), 'up')
+#10 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(146): Illuminate\\Database\\Migrations\\Migrator->runUp('/var/www/html/m...', 1, false)
+#11 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(95): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(69): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#19 /var/www/html/musicapp2018/vendor/symfony/console/Command/Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#20 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(946): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(248): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 /var/www/html/musicapp2018/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2018-10-16 18:54:28] local.ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'music_app.migrations' doesn't exist (SQL: select max(`batch`) as aggregate from `migrations`) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'music_app.migrations' doesn't exist (SQL: select max(`batch`) as aggregate from `migrations`) at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:664, PDOException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'music_app.migrations' doesn't exist at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:326)
+[stacktrace]
+#0 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('select max(`bat...', Array, Object(Closure))
+#1 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(333): Illuminate\\Database\\Connection->run('select max(`bat...', Array, Object(Closure))
+#2 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(1719): Illuminate\\Database\\Connection->select('select max(`bat...', Array, false)
+#3 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(1704): Illuminate\\Database\\Query\\Builder->runSelect()
+#4 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2051): Illuminate\\Database\\Query\\Builder->get(Array)
+#5 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2001): Illuminate\\Database\\Query\\Builder->aggregate('max', Array)
+#6 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(125): Illuminate\\Database\\Query\\Builder->max('batch')
+#7 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(78): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->getLastBatchNumber()
+#8 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(223): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->getLast()
+#9 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(201): Illuminate\\Database\\Migrations\\Migrator->getMigrationsForRollback(Array)
+#10 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/RollbackCommand.php(63): Illuminate\\Database\\Migrations\\Migrator->rollback(Array, Array)
+#11 [internal function]: Illuminate\\Database\\Console\\Migrations\\RollbackCommand->handle()
+#12 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#13 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#14 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#15 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#16 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#17 /var/www/html/musicapp2018/vendor/symfony/console/Command/Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#18 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#19 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(946): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#20 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(248): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\RollbackCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#21 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 /var/www/html/musicapp2018/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 {main}
+"} 
+[2018-10-16 18:54:35] local.ERROR: SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint (SQL: alter table `tbl_accounts` add constraint `tbl_accounts_category_foreign` foreign key (`category`) references `category` (`code_category`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: HY000): SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint (SQL: alter table `tbl_accounts` add constraint `tbl_accounts_category_foreign` foreign key (`category`) references `category` (`code_category`)) at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:664, PDOException(code: HY000): SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:458)
+[stacktrace]
+#0 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `tb...', Array, Object(Closure))
+#1 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(459): Illuminate\\Database\\Connection->run('alter table `tb...', Array, Object(Closure))
+#2 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(86): Illuminate\\Database\\Connection->statement('alter table `tb...')
+#3 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(252): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(165): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(221): Illuminate\\Database\\Schema\\Builder->create('tbl_accounts', Object(Closure))
+#6 /var/www/html/musicapp2018/database/migrations/2018_10_15_222649_create_tbl_account.php(27): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(359): CreateTblAccount->up()
+#8 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(366): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(177): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateTblAccount), 'up')
+#10 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(146): Illuminate\\Database\\Migrations\\Migrator->runUp('/var/www/html/m...', 1, false)
+#11 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(95): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(69): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#19 /var/www/html/musicapp2018/vendor/symfony/console/Command/Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#20 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(946): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(248): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 /var/www/html/musicapp2018/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2018-10-16 18:56:02] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'huytran161297@gmail.com' for key 'tbl_accounts_email_unique' (SQL: insert into `tbl_accounts` (`email`, `password`, `username`) values (huytran161297@gmail.com, $2y$10$HmEI5PbVnN.umFqk7qY3JuF20o/kcoVPr7btZgTHbeqUWJ534Uuey, Tran Viet Huy), (nhatvan97@gmail.com, $2y$10$W31QwwyJTTufGROhg13XwuhIhF5U.weg10rhetgyOOLybdI/FpEM6, Pham Hoan), (hungcon1997@gmail.com, $2y$10$KNr2uMlXRxgPQiVJJIVrSewfna0OGZ1PSzWg9eevCHMMjmFTlMtBO, Phung Van Hung), (chungbien1997@gmail.com, $2y$10$pj.rlRKUnx87S4fEN1F3qeH0iot/IfLkZ3g2gNtggQWIhLjnpWJpG, Bien Thanh Chung)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'huytran161297@gmail.com' for key 'tbl_accounts_email_unique' (SQL: insert into `tbl_accounts` (`email`, `password`, `username`) values (huytran161297@gmail.com, $2y$10$HmEI5PbVnN.umFqk7qY3JuF20o/kcoVPr7btZgTHbeqUWJ534Uuey, Tran Viet Huy), (nhatvan97@gmail.com, $2y$10$W31QwwyJTTufGROhg13XwuhIhF5U.weg10rhetgyOOLybdI/FpEM6, Pham Hoan), (hungcon1997@gmail.com, $2y$10$KNr2uMlXRxgPQiVJJIVrSewfna0OGZ1PSzWg9eevCHMMjmFTlMtBO, Phung Van Hung), (chungbien1997@gmail.com, $2y$10$pj.rlRKUnx87S4fEN1F3qeH0iot/IfLkZ3g2gNtggQWIhLjnpWJpG, Bien Thanh Chung)) at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:664, PDOException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'huytran161297@gmail.com' for key 'tbl_accounts_email_unique' at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:458)
+[stacktrace]
+#0 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('insert into `tb...', Array, Object(Closure))
+#1 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(459): Illuminate\\Database\\Connection->run('insert into `tb...', Array, Object(Closure))
+#2 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(411): Illuminate\\Database\\Connection->statement('insert into `tb...', Array)
+#3 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2142): Illuminate\\Database\\Connection->insert('insert into `tb...', Array)
+#4 /var/www/html/musicapp2018/database/seeds/Tbl_Accounts.php(18): Illuminate\\Database\\Query\\Builder->insert(Array)
+#5 [internal function]: Tbl_Accounts->run()
+#6 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#7 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#8 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#9 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#10 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(122): Illuminate\\Container\\Container->call(Array)
+#11 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(42): Illuminate\\Database\\Seeder->__invoke()
+#12 /var/www/html/musicapp2018/database/seeds/DatabaseSeeder.php(15): Illuminate\\Database\\Seeder->call('Tbl_Accounts')
+#13 [internal function]: DatabaseSeeder->run()
+#14 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(122): Illuminate\\Container\\Container->call(Array)
+#19 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Console/Seeds/SeedCommand.php(63): Illuminate\\Database\\Seeder->__invoke()
+#20 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/GuardsAttributes.php(122): Illuminate\\Database\\Console\\Seeds\\SeedCommand->Illuminate\\Database\\Console\\Seeds\\{closure}()
+#21 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Console/Seeds/SeedCommand.php(64): Illuminate\\Database\\Eloquent\\Model::unguarded(Object(Closure))
+#22 [internal function]: Illuminate\\Database\\Console\\Seeds\\SeedCommand->handle()
+#23 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#24 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#25 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#26 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#27 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#28 /var/www/html/musicapp2018/vendor/symfony/console/Command/Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#29 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#30 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(946): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(248): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Seeds\\SeedCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#33 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#34 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#35 /var/www/html/musicapp2018/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#36 {main}
+"} 
+[2018-10-16 18:58:58] local.ERROR: SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint (SQL: alter table `tbl_accounts` add constraint `tbl_accounts_category_foreign` foreign key (`category`) references `category` (`code_category`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: HY000): SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint (SQL: alter table `tbl_accounts` add constraint `tbl_accounts_category_foreign` foreign key (`category`) references `category` (`code_category`)) at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:664, PDOException(code: HY000): SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:458)
+[stacktrace]
+#0 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `tb...', Array, Object(Closure))
+#1 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(459): Illuminate\\Database\\Connection->run('alter table `tb...', Array, Object(Closure))
+#2 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(86): Illuminate\\Database\\Connection->statement('alter table `tb...')
+#3 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(252): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(165): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(221): Illuminate\\Database\\Schema\\Builder->create('tbl_accounts', Object(Closure))
+#6 /var/www/html/musicapp2018/database/migrations/2018_10_15_222649_create_tbl_account.php(27): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(359): CreateTblAccount->up()
+#8 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(366): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(177): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateTblAccount), 'up')
+#10 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(146): Illuminate\\Database\\Migrations\\Migrator->runUp('/var/www/html/m...', 1, false)
+#11 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(95): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(69): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#19 /var/www/html/musicapp2018/vendor/symfony/console/Command/Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#20 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(946): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(248): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 /var/www/html/musicapp2018/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2018-10-16 19:02:14] local.ERROR: SQLSTATE[HY000]: General error: 1364 Field 'category' doesn't have a default value (SQL: insert into `tbl_accounts` (`email`, `password`, `username`) values (huytran161297@gmail.com, $2y$10$4wyyYx.tvvCdmVDbYp1UyONIneh/8CKa33wfaQOhMh84TuTT77.pK, Tran Viet Huy), (nhatvan97@gmail.com, $2y$10$isBMk7gSup5LowAp8p7LO.FmqJebBHrR8MvuOL/XVML18PpSLsRmC, Pham Hoan), (hungcon1997@gmail.com, $2y$10$H43WFYf0ytAoqo16VT0WWeaMitnmRvlVC69k7qkO98GKrFhT850Oi, Phung Van Hung), (chungbien1997@gmail.com, $2y$10$aoPOKMY1fBGo.X.VsMQYC.cxweJApauq5SP2zeRJU8dPQv5NqbG66, Bien Thanh Chung)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: HY000): SQLSTATE[HY000]: General error: 1364 Field 'category' doesn't have a default value (SQL: insert into `tbl_accounts` (`email`, `password`, `username`) values (huytran161297@gmail.com, $2y$10$4wyyYx.tvvCdmVDbYp1UyONIneh/8CKa33wfaQOhMh84TuTT77.pK, Tran Viet Huy), (nhatvan97@gmail.com, $2y$10$isBMk7gSup5LowAp8p7LO.FmqJebBHrR8MvuOL/XVML18PpSLsRmC, Pham Hoan), (hungcon1997@gmail.com, $2y$10$H43WFYf0ytAoqo16VT0WWeaMitnmRvlVC69k7qkO98GKrFhT850Oi, Phung Van Hung), (chungbien1997@gmail.com, $2y$10$aoPOKMY1fBGo.X.VsMQYC.cxweJApauq5SP2zeRJU8dPQv5NqbG66, Bien Thanh Chung)) at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:664, PDOException(code: HY000): SQLSTATE[HY000]: General error: 1364 Field 'category' doesn't have a default value at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:458)
+[stacktrace]
+#0 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('insert into `tb...', Array, Object(Closure))
+#1 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(459): Illuminate\\Database\\Connection->run('insert into `tb...', Array, Object(Closure))
+#2 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(411): Illuminate\\Database\\Connection->statement('insert into `tb...', Array)
+#3 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2142): Illuminate\\Database\\Connection->insert('insert into `tb...', Array)
+#4 /var/www/html/musicapp2018/database/seeds/Tbl_Accounts.php(18): Illuminate\\Database\\Query\\Builder->insert(Array)
+#5 [internal function]: Tbl_Accounts->run()
+#6 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#7 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#8 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#9 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#10 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(122): Illuminate\\Container\\Container->call(Array)
+#11 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(42): Illuminate\\Database\\Seeder->__invoke()
+#12 /var/www/html/musicapp2018/database/seeds/DatabaseSeeder.php(15): Illuminate\\Database\\Seeder->call('Tbl_Accounts')
+#13 [internal function]: DatabaseSeeder->run()
+#14 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Seeder.php(122): Illuminate\\Container\\Container->call(Array)
+#19 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Console/Seeds/SeedCommand.php(63): Illuminate\\Database\\Seeder->__invoke()
+#20 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/GuardsAttributes.php(122): Illuminate\\Database\\Console\\Seeds\\SeedCommand->Illuminate\\Database\\Console\\Seeds\\{closure}()
+#21 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Console/Seeds/SeedCommand.php(64): Illuminate\\Database\\Eloquent\\Model::unguarded(Object(Closure))
+#22 [internal function]: Illuminate\\Database\\Console\\Seeds\\SeedCommand->handle()
+#23 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#24 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#25 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#26 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#27 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#28 /var/www/html/musicapp2018/vendor/symfony/console/Command/Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#29 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#30 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(946): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(248): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Seeds\\SeedCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#33 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#34 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#35 /var/www/html/musicapp2018/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#36 {main}
+"} 
+[2018-10-16 19:15:51] local.ERROR: SQLSTATE[42000]: Syntax error or access violation: 1091 Can't DROP 'category'; check that column/key exists (SQL: alter table `tbl_accounts` drop foreign key `category`) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1091 Can't DROP 'category'; check that column/key exists (SQL: alter table `tbl_accounts` drop foreign key `category`) at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:664, PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1091 Can't DROP 'category'; check that column/key exists at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:458)
+[stacktrace]
+#0 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `tb...', Array, Object(Closure))
+#1 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(459): Illuminate\\Database\\Connection->run('alter table `tb...', Array, Object(Closure))
+#2 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(86): Illuminate\\Database\\Connection->statement('alter table `tb...')
+#3 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(252): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(149): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(221): Illuminate\\Database\\Schema\\Builder->table('tbl_accounts', Object(Closure))
+#6 /var/www/html/musicapp2018/database/migrations/2018_10_16_191216_fix_tbl_accounts_table.php(31): Illuminate\\Support\\Facades\\Facade::__callStatic('table', Array)
+#7 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(359): FixTblAccountsTable->down()
+#8 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(366): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(334): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(FixTblAccountsTable), 'down')
+#10 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(257): Illuminate\\Database\\Migrations\\Migrator->runDown('/var/www/html/m...', Object(stdClass), false)
+#11 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(209): Illuminate\\Database\\Migrations\\Migrator->rollbackMigrations(Array, Array, Array)
+#12 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/RollbackCommand.php(63): Illuminate\\Database\\Migrations\\Migrator->rollback(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\RollbackCommand->handle()
+#14 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#19 /var/www/html/musicapp2018/vendor/symfony/console/Command/Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#20 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(946): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(248): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\RollbackCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 /var/www/html/musicapp2018/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2018-10-16 19:20:41] local.ERROR: SQLSTATE[42000]: Syntax error or access violation: 1091 Can't DROP 'category'; check that column/key exists (SQL: alter table `tbl_accounts` drop foreign key `category`) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1091 Can't DROP 'category'; check that column/key exists (SQL: alter table `tbl_accounts` drop foreign key `category`) at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:664, PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1091 Can't DROP 'category'; check that column/key exists at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:458)
+[stacktrace]
+#0 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `tb...', Array, Object(Closure))
+#1 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(459): Illuminate\\Database\\Connection->run('alter table `tb...', Array, Object(Closure))
+#2 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(86): Illuminate\\Database\\Connection->statement('alter table `tb...')
+#3 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(252): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(149): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(221): Illuminate\\Database\\Schema\\Builder->table('tbl_accounts', Object(Closure))
+#6 /var/www/html/musicapp2018/database/migrations/2018_10_16_191216_fix_tbl_accounts_table.php(30): Illuminate\\Support\\Facades\\Facade::__callStatic('table', Array)
+#7 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(359): FixTblAccountsTable->down()
+#8 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(366): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(334): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(FixTblAccountsTable), 'down')
+#10 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(257): Illuminate\\Database\\Migrations\\Migrator->runDown('/var/www/html/m...', Object(stdClass), false)
+#11 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(209): Illuminate\\Database\\Migrations\\Migrator->rollbackMigrations(Array, Array, Array)
+#12 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/RollbackCommand.php(63): Illuminate\\Database\\Migrations\\Migrator->rollback(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\RollbackCommand->handle()
+#14 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#19 /var/www/html/musicapp2018/vendor/symfony/console/Command/Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#20 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(946): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(248): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\RollbackCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 /var/www/html/musicapp2018/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2018-10-16 19:21:06] local.ERROR: SQLSTATE[42000]: Syntax error or access violation: 1091 Can't DROP 'category'; check that column/key exists (SQL: alter table `tbl_accounts` drop foreign key `category`) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1091 Can't DROP 'category'; check that column/key exists (SQL: alter table `tbl_accounts` drop foreign key `category`) at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:664, PDOException(code: 42000): SQLSTATE[42000]: Syntax error or access violation: 1091 Can't DROP 'category'; check that column/key exists at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:458)
+[stacktrace]
+#0 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `tb...', Array, Object(Closure))
+#1 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(459): Illuminate\\Database\\Connection->run('alter table `tb...', Array, Object(Closure))
+#2 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(86): Illuminate\\Database\\Connection->statement('alter table `tb...')
+#3 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(252): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(149): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(221): Illuminate\\Database\\Schema\\Builder->table('tbl_accounts', Object(Closure))
+#6 /var/www/html/musicapp2018/database/migrations/2018_10_16_191216_fix_tbl_accounts_table.php(30): Illuminate\\Support\\Facades\\Facade::__callStatic('table', Array)
+#7 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(359): FixTblAccountsTable->down()
+#8 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(366): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(334): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(FixTblAccountsTable), 'down')
+#10 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(257): Illuminate\\Database\\Migrations\\Migrator->runDown('/var/www/html/m...', Object(stdClass), false)
+#11 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(209): Illuminate\\Database\\Migrations\\Migrator->rollbackMigrations(Array, Array, Array)
+#12 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/RollbackCommand.php(63): Illuminate\\Database\\Migrations\\Migrator->rollback(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\RollbackCommand->handle()
+#14 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#19 /var/www/html/musicapp2018/vendor/symfony/console/Command/Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#20 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(946): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(248): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\RollbackCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 /var/www/html/musicapp2018/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2018-10-16 19:21:17] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails (SQL: drop table if exists `category`) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails (SQL: drop table if exists `category`) at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:664, PDOException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:458)
+[stacktrace]
+#0 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('drop table if e...', Array, Object(Closure))
+#1 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(459): Illuminate\\Database\\Connection->run('drop table if e...', Array, Object(Closure))
+#2 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(86): Illuminate\\Database\\Connection->statement('drop table if e...')
+#3 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(252): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(191): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(221): Illuminate\\Database\\Schema\\Builder->dropIfExists('category')
+#6 /var/www/html/musicapp2018/database/migrations/2018_10_16_183119_create_tbl_category.php(32): Illuminate\\Support\\Facades\\Facade::__callStatic('dropIfExists', Array)
+#7 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(359): CreateTblCategory->down()
+#8 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(366): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(334): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateTblCategory), 'down')
+#10 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(257): Illuminate\\Database\\Migrations\\Migrator->runDown('/var/www/html/m...', Object(stdClass), false)
+#11 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(209): Illuminate\\Database\\Migrations\\Migrator->rollbackMigrations(Array, Array, Array)
+#12 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/RollbackCommand.php(63): Illuminate\\Database\\Migrations\\Migrator->rollback(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\RollbackCommand->handle()
+#14 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#19 /var/www/html/musicapp2018/vendor/symfony/console/Command/Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#20 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(946): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(248): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\RollbackCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 /var/www/html/musicapp2018/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2018-10-16 19:22:49] local.ERROR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'music_app.migrations' doesn't exist (SQL: select max(`batch`) as aggregate from `migrations`) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'music_app.migrations' doesn't exist (SQL: select max(`batch`) as aggregate from `migrations`) at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:664, PDOException(code: 42S02): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'music_app.migrations' doesn't exist at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:326)
+[stacktrace]
+#0 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('select max(`bat...', Array, Object(Closure))
+#1 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(333): Illuminate\\Database\\Connection->run('select max(`bat...', Array, Object(Closure))
+#2 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(1719): Illuminate\\Database\\Connection->select('select max(`bat...', Array, false)
+#3 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(1704): Illuminate\\Database\\Query\\Builder->runSelect()
+#4 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2051): Illuminate\\Database\\Query\\Builder->get(Array)
+#5 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2001): Illuminate\\Database\\Query\\Builder->aggregate('max', Array)
+#6 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(125): Illuminate\\Database\\Query\\Builder->max('batch')
+#7 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/DatabaseMigrationRepository.php(78): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->getLastBatchNumber()
+#8 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(223): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->getLast()
+#9 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(201): Illuminate\\Database\\Migrations\\Migrator->getMigrationsForRollback(Array)
+#10 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/RollbackCommand.php(63): Illuminate\\Database\\Migrations\\Migrator->rollback(Array, Array)
+#11 [internal function]: Illuminate\\Database\\Console\\Migrations\\RollbackCommand->handle()
+#12 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#13 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#14 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#15 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#16 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#17 /var/www/html/musicapp2018/vendor/symfony/console/Command/Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#18 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#19 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(946): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#20 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(248): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\RollbackCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#21 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 /var/www/html/musicapp2018/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 {main}
+"} 
+[2018-10-16 19:23:29] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails (SQL: drop table if exists `category`) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails (SQL: drop table if exists `category`) at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:664, PDOException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:458)
+[stacktrace]
+#0 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('drop table if e...', Array, Object(Closure))
+#1 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(459): Illuminate\\Database\\Connection->run('drop table if e...', Array, Object(Closure))
+#2 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(86): Illuminate\\Database\\Connection->statement('drop table if e...')
+#3 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(252): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(191): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(221): Illuminate\\Database\\Schema\\Builder->dropIfExists('category')
+#6 /var/www/html/musicapp2018/database/migrations/2018_10_16_183119_create_tbl_category.php(32): Illuminate\\Support\\Facades\\Facade::__callStatic('dropIfExists', Array)
+#7 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(359): CreateTblCategory->down()
+#8 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(366): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(334): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateTblCategory), 'down')
+#10 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(257): Illuminate\\Database\\Migrations\\Migrator->runDown('/var/www/html/m...', Object(stdClass), false)
+#11 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(209): Illuminate\\Database\\Migrations\\Migrator->rollbackMigrations(Array, Array, Array)
+#12 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/RollbackCommand.php(63): Illuminate\\Database\\Migrations\\Migrator->rollback(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\RollbackCommand->handle()
+#14 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#19 /var/www/html/musicapp2018/vendor/symfony/console/Command/Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#20 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(946): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(248): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\RollbackCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 /var/www/html/musicapp2018/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2018-10-16 19:25:19] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails (SQL: drop table if exists `category`) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails (SQL: drop table if exists `category`) at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:664, PDOException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:458)
+[stacktrace]
+#0 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('drop table if e...', Array, Object(Closure))
+#1 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(459): Illuminate\\Database\\Connection->run('drop table if e...', Array, Object(Closure))
+#2 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(86): Illuminate\\Database\\Connection->statement('drop table if e...')
+#3 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(252): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(191): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(221): Illuminate\\Database\\Schema\\Builder->dropIfExists('category')
+#6 /var/www/html/musicapp2018/database/migrations/2018_10_16_183119_create_tbl_category.php(33): Illuminate\\Support\\Facades\\Facade::__callStatic('dropIfExists', Array)
+#7 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(359): CreateTblCategory->down()
+#8 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(366): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(334): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateTblCategory), 'down')
+#10 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(257): Illuminate\\Database\\Migrations\\Migrator->runDown('/var/www/html/m...', Object(stdClass), false)
+#11 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(209): Illuminate\\Database\\Migrations\\Migrator->rollbackMigrations(Array, Array, Array)
+#12 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/RollbackCommand.php(63): Illuminate\\Database\\Migrations\\Migrator->rollback(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\RollbackCommand->handle()
+#14 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#19 /var/www/html/musicapp2018/vendor/symfony/console/Command/Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#20 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(946): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(248): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\RollbackCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 /var/www/html/musicapp2018/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2018-10-16 19:25:21] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1022 Can't write; duplicate key in table '#sql-44c_1f2' (SQL: alter table `tbl_accounts` add constraint `tbl_accounts_category_foreign` foreign key (`category`) references `category` (`code_category`) on delete cascade) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1022 Can't write; duplicate key in table '#sql-44c_1f2' (SQL: alter table `tbl_accounts` add constraint `tbl_accounts_category_foreign` foreign key (`category`) references `category` (`code_category`) on delete cascade) at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:664, PDOException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1022 Can't write; duplicate key in table '#sql-44c_1f2' at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:458)
+[stacktrace]
+#0 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `tb...', Array, Object(Closure))
+#1 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(459): Illuminate\\Database\\Connection->run('alter table `tb...', Array, Object(Closure))
+#2 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(86): Illuminate\\Database\\Connection->statement('alter table `tb...')
+#3 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(252): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(149): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(221): Illuminate\\Database\\Schema\\Builder->table('tbl_accounts', Object(Closure))
+#6 /var/www/html/musicapp2018/database/migrations/2018_10_16_191216_fix_tbl_accounts_table.php(18): Illuminate\\Support\\Facades\\Facade::__callStatic('table', Array)
+#7 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(359): FixTblAccountsTable->up()
+#8 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(366): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(177): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(FixTblAccountsTable), 'up')
+#10 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(146): Illuminate\\Database\\Migrations\\Migrator->runUp('/var/www/html/m...', 2, false)
+#11 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(95): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(69): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#19 /var/www/html/musicapp2018/vendor/symfony/console/Command/Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#20 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(946): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(248): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 /var/www/html/musicapp2018/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2018-10-16 19:25:53] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails (SQL: drop table if exists `category`) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails (SQL: drop table if exists `category`) at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:664, PDOException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:458)
+[stacktrace]
+#0 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('drop table if e...', Array, Object(Closure))
+#1 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(459): Illuminate\\Database\\Connection->run('drop table if e...', Array, Object(Closure))
+#2 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(86): Illuminate\\Database\\Connection->statement('drop table if e...')
+#3 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(252): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(191): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(221): Illuminate\\Database\\Schema\\Builder->dropIfExists('category')
+#6 /var/www/html/musicapp2018/database/migrations/2018_10_16_183119_create_tbl_category.php(33): Illuminate\\Support\\Facades\\Facade::__callStatic('dropIfExists', Array)
+#7 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(359): CreateTblCategory->down()
+#8 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(366): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(334): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateTblCategory), 'down')
+#10 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(257): Illuminate\\Database\\Migrations\\Migrator->runDown('/var/www/html/m...', Object(stdClass), false)
+#11 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(209): Illuminate\\Database\\Migrations\\Migrator->rollbackMigrations(Array, Array, Array)
+#12 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/RollbackCommand.php(63): Illuminate\\Database\\Migrations\\Migrator->rollback(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\RollbackCommand->handle()
+#14 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#19 /var/www/html/musicapp2018/vendor/symfony/console/Command/Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#20 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(946): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(248): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\RollbackCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 /var/www/html/musicapp2018/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2018-10-16 19:27:39] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails (SQL: drop table if exists `category`) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails (SQL: drop table if exists `category`) at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:664, PDOException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:458)
+[stacktrace]
+#0 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('drop table if e...', Array, Object(Closure))
+#1 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(459): Illuminate\\Database\\Connection->run('drop table if e...', Array, Object(Closure))
+#2 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(86): Illuminate\\Database\\Connection->statement('drop table if e...')
+#3 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(252): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(191): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(221): Illuminate\\Database\\Schema\\Builder->dropIfExists('category')
+#6 /var/www/html/musicapp2018/database/migrations/2018_10_16_183119_create_tbl_category.php(33): Illuminate\\Support\\Facades\\Facade::__callStatic('dropIfExists', Array)
+#7 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(359): CreateTblCategory->down()
+#8 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(366): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(334): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateTblCategory), 'down')
+#10 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(257): Illuminate\\Database\\Migrations\\Migrator->runDown('/var/www/html/m...', Object(stdClass), false)
+#11 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(209): Illuminate\\Database\\Migrations\\Migrator->rollbackMigrations(Array, Array, Array)
+#12 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/RollbackCommand.php(63): Illuminate\\Database\\Migrations\\Migrator->rollback(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\RollbackCommand->handle()
+#14 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#19 /var/www/html/musicapp2018/vendor/symfony/console/Command/Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#20 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(946): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(248): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\RollbackCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 /var/www/html/musicapp2018/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2018-10-16 19:27:41] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1022 Can't write; duplicate key in table '#sql-44c_222' (SQL: alter table `tbl_accounts` add constraint `tbl_accounts_category_foreign` foreign key (`category`) references `category` (`code_category`) on delete cascade) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1022 Can't write; duplicate key in table '#sql-44c_222' (SQL: alter table `tbl_accounts` add constraint `tbl_accounts_category_foreign` foreign key (`category`) references `category` (`code_category`) on delete cascade) at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:664, PDOException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1022 Can't write; duplicate key in table '#sql-44c_222' at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:458)
+[stacktrace]
+#0 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `tb...', Array, Object(Closure))
+#1 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(459): Illuminate\\Database\\Connection->run('alter table `tb...', Array, Object(Closure))
+#2 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(86): Illuminate\\Database\\Connection->statement('alter table `tb...')
+#3 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(252): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(149): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(221): Illuminate\\Database\\Schema\\Builder->table('tbl_accounts', Object(Closure))
+#6 /var/www/html/musicapp2018/database/migrations/2018_10_16_191216_fix_tbl_accounts_table.php(18): Illuminate\\Support\\Facades\\Facade::__callStatic('table', Array)
+#7 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(359): FixTblAccountsTable->up()
+#8 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(366): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(177): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(FixTblAccountsTable), 'up')
+#10 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(146): Illuminate\\Database\\Migrations\\Migrator->runUp('/var/www/html/m...', 2, false)
+#11 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(95): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(69): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#19 /var/www/html/musicapp2018/vendor/symfony/console/Command/Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#20 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(946): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(248): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 /var/www/html/musicapp2018/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2018-10-16 20:34:43] local.ERROR: Command "make:migrate" is not defined.
+
+Did you mean one of these?
+    make:auth
+    make:command
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make:migrate\" is not defined.
+
+Did you mean one of these?
+    make:auth
+    make:command
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test at /var/www/html/musicapp2018/vendor/symfony/console/Application.php:618)
+[stacktrace]
+#0 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(229): Symfony\\Component\\Console\\Application->find('make:migrate')
+#1 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /var/www/html/musicapp2018/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2018-10-16 20:39:14] local.ERROR: Command "make:migrate" is not defined.
+
+Did you mean one of these?
+    make:auth
+    make:command
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make:migrate\" is not defined.
+
+Did you mean one of these?
+    make:auth
+    make:command
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test at /var/www/html/musicapp2018/vendor/symfony/console/Application.php:618)
+[stacktrace]
+#0 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(229): Symfony\\Component\\Console\\Application->find('make:migrate')
+#1 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /var/www/html/musicapp2018/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2018-10-16 20:45:11] local.ERROR: Command "make:migrate" is not defined.
+
+Did you mean one of these?
+    make:auth
+    make:command
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make:migrate\" is not defined.
+
+Did you mean one of these?
+    make:auth
+    make:command
+    make:controller
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:policy
+    make:provider
+    make:request
+    make:resource
+    make:rule
+    make:seeder
+    make:test at /var/www/html/musicapp2018/vendor/symfony/console/Application.php:618)
+[stacktrace]
+#0 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(229): Symfony\\Component\\Console\\Application->find('make:migrate')
+#1 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /var/www/html/musicapp2018/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2018-10-16 21:13:07] local.ERROR: SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint (SQL: alter table `rlt_notifications` add constraint `rlt_notifications_id_notification_foreign` foreign key (`id_notification`) references `tbl_notifications` (`id_notification`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: HY000): SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint (SQL: alter table `rlt_notifications` add constraint `rlt_notifications_id_notification_foreign` foreign key (`id_notification`) references `tbl_notifications` (`id_notification`)) at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:664, PDOException(code: HY000): SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:458)
+[stacktrace]
+#0 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `rl...', Array, Object(Closure))
+#1 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(459): Illuminate\\Database\\Connection->run('alter table `rl...', Array, Object(Closure))
+#2 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(86): Illuminate\\Database\\Connection->statement('alter table `rl...')
+#3 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(252): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(165): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(221): Illuminate\\Database\\Schema\\Builder->create('rlt_notificatio...', Object(Closure))
+#6 /var/www/html/musicapp2018/database/migrations/2018_10_16_210803_create_rlt_notifications.php(25): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(359): CreateRltNotifications->up()
+#8 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(366): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(177): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateRltNotifications), 'up')
+#10 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(146): Illuminate\\Database\\Migrations\\Migrator->runUp('/var/www/html/m...', 2, false)
+#11 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(95): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(69): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#19 /var/www/html/musicapp2018/vendor/symfony/console/Command/Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#20 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(946): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(248): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 /var/www/html/musicapp2018/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2018-10-16 21:17:46] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails (SQL: drop table if exists `tbl_notifications`) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails (SQL: drop table if exists `tbl_notifications`) at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:664, PDOException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:458)
+[stacktrace]
+#0 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('drop table if e...', Array, Object(Closure))
+#1 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(459): Illuminate\\Database\\Connection->run('drop table if e...', Array, Object(Closure))
+#2 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(86): Illuminate\\Database\\Connection->statement('drop table if e...')
+#3 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(252): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(191): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(221): Illuminate\\Database\\Schema\\Builder->dropIfExists('tbl_notificatio...')
+#6 /var/www/html/musicapp2018/database/migrations/2018_10_16_204830_create_tbl_notification.php(31): Illuminate\\Support\\Facades\\Facade::__callStatic('dropIfExists', Array)
+#7 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(359): CreateTblNotification->down()
+#8 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(366): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(334): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateTblNotification), 'down')
+#10 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(257): Illuminate\\Database\\Migrations\\Migrator->runDown('/var/www/html/m...', Object(stdClass), false)
+#11 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(209): Illuminate\\Database\\Migrations\\Migrator->rollbackMigrations(Array, Array, Array)
+#12 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/RollbackCommand.php(63): Illuminate\\Database\\Migrations\\Migrator->rollback(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\RollbackCommand->handle()
+#14 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#19 /var/www/html/musicapp2018/vendor/symfony/console/Command/Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#20 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(946): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(248): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\RollbackCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 /var/www/html/musicapp2018/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2018-10-16 21:18:35] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails (SQL: drop table if exists `tbl_notifications`) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails (SQL: drop table if exists `tbl_notifications`) at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:664, PDOException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1217 Cannot delete or update a parent row: a foreign key constraint fails at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:458)
+[stacktrace]
+#0 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('drop table if e...', Array, Object(Closure))
+#1 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(459): Illuminate\\Database\\Connection->run('drop table if e...', Array, Object(Closure))
+#2 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(86): Illuminate\\Database\\Connection->statement('drop table if e...')
+#3 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(252): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(191): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(221): Illuminate\\Database\\Schema\\Builder->dropIfExists('tbl_notificatio...')
+#6 /var/www/html/musicapp2018/database/migrations/2018_10_16_204830_create_tbl_notification.php(31): Illuminate\\Support\\Facades\\Facade::__callStatic('dropIfExists', Array)
+#7 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(359): CreateTblNotification->down()
+#8 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(366): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(334): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateTblNotification), 'down')
+#10 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(257): Illuminate\\Database\\Migrations\\Migrator->runDown('/var/www/html/m...', Object(stdClass), false)
+#11 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(209): Illuminate\\Database\\Migrations\\Migrator->rollbackMigrations(Array, Array, Array)
+#12 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/RollbackCommand.php(63): Illuminate\\Database\\Migrations\\Migrator->rollback(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\RollbackCommand->handle()
+#14 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#19 /var/www/html/musicapp2018/vendor/symfony/console/Command/Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#20 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(946): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(248): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\RollbackCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 /var/www/html/musicapp2018/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2018-10-16 21:46:20] local.ERROR: SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint (SQL: alter table `tbl_album_details` add constraint `tbl_album_details_id_album_foreign` foreign key (`id_album`) references `tbl_album` (`id_album`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: HY000): SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint (SQL: alter table `tbl_album_details` add constraint `tbl_album_details_id_album_foreign` foreign key (`id_album`) references `tbl_album` (`id_album`)) at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:664, PDOException(code: HY000): SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:458)
+[stacktrace]
+#0 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `tb...', Array, Object(Closure))
+#1 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(459): Illuminate\\Database\\Connection->run('alter table `tb...', Array, Object(Closure))
+#2 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(86): Illuminate\\Database\\Connection->statement('alter table `tb...')
+#3 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(252): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(165): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(221): Illuminate\\Database\\Schema\\Builder->create('tbl_album_detai...', Object(Closure))
+#6 /var/www/html/musicapp2018/database/migrations/2018_10_16_212607_create_tbl_album_details.php(24): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(359): CreateTblAlbumDetails->up()
+#8 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(366): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(177): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateTblAlbumDetails), 'up')
+#10 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(146): Illuminate\\Database\\Migrations\\Migrator->runUp('/var/www/html/m...', 1, false)
+#11 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(95): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(69): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#19 /var/www/html/musicapp2018/vendor/symfony/console/Command/Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#20 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(946): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(248): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 /var/www/html/musicapp2018/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2018-10-16 22:33:25] local.ERROR: SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint (SQL: alter table `rlt_comments` add constraint `rlt_comments_id_song_foreign` foreign key (`id_song`) references `tbl_songs` (`id_song`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: HY000): SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint (SQL: alter table `rlt_comments` add constraint `rlt_comments_id_song_foreign` foreign key (`id_song`) references `tbl_songs` (`id_song`)) at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:664, PDOException(code: HY000): SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:458)
+[stacktrace]
+#0 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `rl...', Array, Object(Closure))
+#1 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(459): Illuminate\\Database\\Connection->run('alter table `rl...', Array, Object(Closure))
+#2 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(86): Illuminate\\Database\\Connection->statement('alter table `rl...')
+#3 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(252): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(165): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(221): Illuminate\\Database\\Schema\\Builder->create('rlt_comments', Object(Closure))
+#6 /var/www/html/musicapp2018/database/migrations/2018_10_16_212720_create_rlt_comments.php(26): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(359): CreateRltComments->up()
+#8 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(366): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(177): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateRltComments), 'up')
+#10 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(146): Illuminate\\Database\\Migrations\\Migrator->runUp('/var/www/html/m...', 1, false)
+#11 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(95): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(69): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#19 /var/www/html/musicapp2018/vendor/symfony/console/Command/Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#20 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(946): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(248): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 /var/www/html/musicapp2018/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 
+[2018-10-16 22:39:32] local.ERROR: SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint (SQL: alter table `rlt_comments` add constraint `rlt_comments_id_song_foreign` foreign key (`id_song`) references `tbl_songs` (`id_song`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: HY000): SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint (SQL: alter table `rlt_comments` add constraint `rlt_comments_id_song_foreign` foreign key (`id_song`) references `tbl_songs` (`id_song`)) at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:664, PDOException(code: HY000): SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:458)
+[stacktrace]
+#0 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `rl...', Array, Object(Closure))
+#1 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(459): Illuminate\\Database\\Connection->run('alter table `rl...', Array, Object(Closure))
+#2 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php(86): Illuminate\\Database\\Connection->statement('alter table `rl...')
+#3 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(252): Illuminate\\Database\\Schema\\Blueprint->build(Object(Illuminate\\Database\\MySqlConnection), Object(Illuminate\\Database\\Schema\\Grammars\\MySqlGrammar))
+#4 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(165): Illuminate\\Database\\Schema\\Builder->build(Object(Illuminate\\Database\\Schema\\Blueprint))
+#5 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(221): Illuminate\\Database\\Schema\\Builder->create('rlt_comments', Object(Closure))
+#6 /var/www/html/musicapp2018/database/migrations/2018_10_16_212720_create_rlt_comments.php(26): Illuminate\\Support\\Facades\\Facade::__callStatic('create', Array)
+#7 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(359): CreateRltComments->up()
+#8 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(366): Illuminate\\Database\\Migrations\\Migrator->Illuminate\\Database\\Migrations\\{closure}()
+#9 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(177): Illuminate\\Database\\Migrations\\Migrator->runMigration(Object(CreateRltComments), 'up')
+#10 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(146): Illuminate\\Database\\Migrations\\Migrator->runUp('/var/www/html/m...', 1, false)
+#11 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(95): Illuminate\\Database\\Migrations\\Migrator->runPending(Array, Array)
+#12 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(69): Illuminate\\Database\\Migrations\\Migrator->run(Array, Array)
+#13 [internal function]: Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#14 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#15 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#16 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#17 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Container/Container.php(549): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#18 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(183): Illuminate\\Container\\Container->call(Array)
+#19 /var/www/html/musicapp2018/vendor/symfony/console/Command/Command.php(251): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#20 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Command.php(170): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#21 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(946): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(248): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#24 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#26 /var/www/html/musicapp2018/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#27 {main}
+"} 

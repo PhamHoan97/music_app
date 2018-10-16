@@ -79,7 +79,7 @@ class LoginController extends Controller
             return $authUser;
         }else{
             return User::create([
-                'name' => $user->name,
+                'username' => $user->username,
                 'email' => $user->email,
                 'provider' => strtoupper($provider),
                 'provider_id' => $user->id,

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTblAccount extends Migration
+class CreateTblAccounts extends Migration
 {
     /**
      * Run the migrations.
@@ -14,17 +14,18 @@ class CreateTblAccount extends Migration
     public function up()
     {
         Schema::create('tbl_accounts', function (Blueprint $table) {
-            $table->increments('id_account');
+            $table->increments('id');
             $table->string('username');
             $table->string('password')->nullable();
             $table->string('provider')->nullable();
             $table->string('provider_id')->nullable();
             $table->string('email')->unique()->nullable();
-            $table->integer('category')->default(1);
-            $table->integer('tbl_account_detail')->unsigned()->nullable();
+            $table->integer('id_category')->unsigned()->nullable();
+            $table->foreign('id_category')->references('id')->on('category');
             $table->rememberToken();
             $table->timestamps();
         });
+
     }
 
     /**

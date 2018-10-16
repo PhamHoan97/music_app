@@ -3370,6 +3370,7 @@ return array(
     'Symfony\\Thanks\\GitHubClient' => $vendorDir . '/symfony/thanks/src/GitHubClient.php',
     'Symfony\\Thanks\\Thanks' => $vendorDir . '/symfony/thanks/src/Thanks.php',
     'Tbl_Accounts' => $baseDir . '/database/seeds/Tbl_Accounts.php',
+    'Tbl_Category' => $baseDir . '/database/seeds/Tbl_Category.php',
     'Tests\\CreatesApplication' => $baseDir . '/tests/CreatesApplication.php',
     'Tests\\Feature\\ExampleTest' => $baseDir . '/tests/Feature/ExampleTest.php',
     'Tests\\TestCase' => $baseDir . '/tests/TestCase.php',
