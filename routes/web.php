@@ -11,11 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
-Route::get('index', function () {
+Route::get('/', function () {
+//    session()->forget('data');
+
     return view('APP.index');
 });
 
@@ -24,7 +26,7 @@ Route::get('profile', function () {
 });
 
 Route::get('single', function () {
-    return view('APP.single');
+    return view('contentmail');
 });
 
 Route::get('browse', function () {
@@ -43,16 +45,21 @@ Route::get('notifications', function () {
     return view('APP.notifications');
 });
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Auth::routes();
 
-Auth::routes();
+//Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::post('loginnormal','App\LoginController@LoginNormal')->name('loginnormal');
 
-Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider');
+Route::get('login/{provider}', 'App\LoginController@redirectToProvider');
 
-Route::get('{provider}/callback', 'Auth\LoginController@handleProviderCallback');
+Route::get('{provider}/callback', 'App\LoginController@handleProviderCallback');
 
-Route::post('sendemail','SendEmail@adminSendEmail')->name('sendemail');
+Route::post('sendemail','App\SendEmail@adminSendEmail')->name('sendemail');
+
+Route::get('logout','App\LoginController@logout')->name('logout');
+
+Route::get('reset','App\SendEmail@redirectSendEmail')->name('resetpassword');
+
+
+

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use GuzzleHttp\Psr7\Request;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Socialite;
 use App\User;
@@ -40,50 +41,9 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    public function redirectToProvider($provider)
-    {
-        return Socialite::driver($provider)->redirect();
-    }
-
     /**
      * Obtain the user information from GitHub.
      *
      * @return \Illuminate\Http\Response
      */
-    public function handleProviderCallback($provider)
-    {
-        if($provider == 'google') {
-            $user = Socialite::driver($provider)->stateless()->user();
-            $checkgmail = User::where('email', $user->email)->where('provider_id', null)->first();
-            if ($checkgmail) {
-                return redirect()->Route('login')->with('status', 'This email is used by someone!!');
-
-            } else {
-                $authUser = $this->findOrCreateUser($user, $provider);
-                Auth::Login($authUser, false);
-                return redirect($this->redirectTo);
-            }
-        }
-
-        if($provider == 'facebook'){
-            $user = Socialite::driver($provider)->stateless()->user();
-            $authUser = $this->findOrCreateUser($user, $provider);
-            Auth::Login($authUser, true);
-            return redirect($this->redirectTo);
-        }
-    }
-
-    public function findOrCreateUser($user,$provider){
-        $authUser = User::where('provider_id',$user->id)->first();
-        if ($authUser){
-            return $authUser;
-        }else{
-            return User::create([
-                'username' => $user->username,
-                'email' => $user->email,
-                'provider' => strtoupper($provider),
-                'provider_id' => $user->id,
-            ]);
-        }
-    }
 }

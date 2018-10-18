@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRltShows extends Migration
+class CreateTblFollow extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateRltShows extends Migration
      */
     public function up()
     {
-        Schema::create('rlt_shows', function (Blueprint $table) {
+        Schema::create('tbl_follows', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('id_account')->unsigned();
-            $table->integer('id_song')->unsigned();
-            $table->foreign('id_song')->references('id')->on('tbl_songs');
+            $table->integer('id_follow')->unsigned();
             $table->foreign('id_account')->references('id')->on('tbl_accounts');
+            $table->foreign('id_follow')->references('id')->on('tbl_accounts');
             $table->rememberToken();
             $table->timestamps();
         });
@@ -31,8 +31,7 @@ class CreateRltShows extends Migration
      */
     public function down()
     {
-        Schema::table('rlt_shows', function (Blueprint $table) {
-            Schema::dropIfExists('rlt_shows');
-        });
+        Schema::dropIfExists('tbl_follows');
+
     }
 }

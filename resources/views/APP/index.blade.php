@@ -154,9 +154,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="sign">
 									<div class="sign-left">
 										<ul>
-											<li><a class="fb" href="#"><i></i>Sign in with Facebook</a></li>
-											<li><a class="goog" href="#"><i></i>Sign in with Google</a></li>
-											<li><a class="linkin" href="#"><i></i>Sign in with Linkedin</a></li>
+											<li><a class="fb" href="{{ url('login/facebook')}}"><i></i>Sign in with Facebook</a></li>
+											<li><a class="goog" href="{{ url('login/google')}}"><i></i>Sign in with Google</a></li>
+											<li><a class="linkin" href="#"><i></i>Sign in with Twitter</a></li>
 										</ul>
 									</div>
 									<div class="sign-right">
@@ -165,7 +165,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											<h3>Create your account </h3>
 											<input type="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
 											<input type="text" value="Mobile number" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Mobile number';}" required="">
-											<input type="text" value="Email id" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email id';}" required="">	
+											<input type="text" value="Email " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email id';}" required="">
 											<input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">	
 											
 											<input type="submit" value="CREATE ACCOUNT" >
@@ -185,12 +185,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<!-- main content start-->
 		<div class="main-content">
 			<!-- header-starts -->
+            <div class="status">
+                @if(session()->has('status'))
+                <span class="alert alert-success form-control">
+                    {{session('status')}}
+               </span>
+                @endif
+
+                @if(session()->has('notice'))
+                <span class="alert alert-danger form-control" >
+                    {{session('notice')}}
+               </span>
+               @endif
+            </div>
 			<div class="header-section">
 			<!--toggle button start-->
 			<a class="toggle-btn  menu-collapsed"><i class="fa fa-bars"></i></a>
 			<!--toggle button end-->
 			<!--notification menu start -->
 				<div class="menu-right">
+
 					<div class="profile_details">		
 						  <div class="col-md-4 serch-part">
 
@@ -219,37 +233,48 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											<div class="col-md-4 player" style="padding-top: 15px">
 													Web Music Phát triển phần mềm chuyên nghiệp
 											</div>
-											 
 
+										@if(!isset(session('data')['name']))
 											<!-- Login -->
 											<div class="col-md-4 login-pop">
 												<div id="loginpop"> <a href="#" id="loginButton">
 													<span>Login <i class="arrow glyphicon glyphicon-chevron-right"></i></span>
 												</a>
 												<a class="top-sign" href="#" data-toggle="modal" data-target="#myModal5"><i class="fa fa-sign-in"></i></a>
-														<div id="loginBox">  
-												<form action="#" method="post" id="loginForm">
-																	<fieldset id="body">
-																		<fieldset>
-																			  <label for="email">Email Address</label>
-																			  <input type="text" name="email" id="email">
-																		</fieldset>
-																		<fieldset>
-																				<label for="password">Password</label>
-																				<input type="password" name="password" id="password">
-																		 </fieldset>
-																		<input type="submit" id="login" value="Sign in">
-																		<label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
-																	</fieldset>
-																<span><a href="#">Forgot your password?</a></span>
+                                                    <div id="loginBox">
+												        <form action="{{route('loginnormal')}}" method="post" id="loginForm">
+													{!! csrf_field() !!}
+													    <fieldset id="body">
+														<fieldset>
+															<label for="email">Email Address</label>
+															<input type="text" name="email" id="email">
+														</fieldset>
+														<fieldset>
+															<label for="password">Password</label>
+															<input type="password" name="password" id="password">
+														</fieldset>
+															<input type="submit" id="login" value="Sign in">
+															<label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
+														</fieldset>
+														<span><a href="{{route('resetpassword')}}">Forgot your password?</a></span>
+															@if(isset(session('data')['name']))
 																<button type="button" class="btn btn-primary btn-notification" data-toggle="modal" data-target="#exampleModalLong">
   																	4 notifications
 																</button>
+															@endif
 														 </form>
 													</div>
 												</div>
 
 											</div>
+											@else
+												<div class="col-md-4 login-pop">
+													<div id="loginpop"><a href="{{Route('logout')}}" id="logoutButton">
+															<span>Logout <i class="arrow glyphicon glyphicon-chevron-right"></i></span>
+														</a>
+													</div>
+												</div>
+											@endif
 										<div class="clearfix" style="height: 65px;"> </div>
 								</div>
 							<!-------->
@@ -1031,7 +1056,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								 <ul id="flexiselDemo1">
 								<li>
 									<a href="{!! url('single')!!}"><img src="{!! asset('images/v1.jpg') !!}" alt=""/></a>
-									<div class="slide-title"><h4>Adele21 </div>
+									<div class="slide-title"><h4>Adele21 </h4></div>
 									<div class="date-city">
 										<h5>Jan-02-16</h5>
 										<div class="buy-tickets">
@@ -1216,9 +1241,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
       <!-- main content end-->
    </section>
   
-<script src="{!! asset('js/jquery.nicescroll.js') !!}"></script>
-<script src="{!! asset('js/scripts.js')!!}"></script>
-<!-- Bootstrap Core JavaScript -->
-<script src="{!! asset('js/bootstrap.js')!!}"></script>
-</body>
+    <script src="{!! asset('js/jquery.nicescroll.js') !!}"></script>
+    <script src="{!! asset('js/scripts.js')!!}"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{!! asset('js/bootstrap.js')!!}"></script>
+    <script src="{!! asset('js/status.js')!!}"></script>
+
+ </body>
 </html>
