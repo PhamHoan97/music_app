@@ -4,10 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model
+class Artist extends Model
 {
     protected $fillable = [
-        'code_category', 'name_category',
+        'name', 'avatar_path', 'number_my_follow', 'number_my_song', 'cover_path',
+        'birthday', 'phone_number', 'more_infor'
     ];
 
     /**
@@ -16,7 +17,7 @@ class Category extends Model
      * @var array
      */
 
-    public $table = "category";
+    public $table = "tbl_artists";
 
     public $timestamps = false;
 }

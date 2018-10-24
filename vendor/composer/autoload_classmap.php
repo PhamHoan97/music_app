@@ -8,7 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'App\\Album' => $baseDir . '/app/Album.php',
     'App\\AlbumDetail' => $baseDir . '/app/AlbumDetail.php',
-    'App\\Category' => $baseDir . '/app/Category.php',
+    'App\\Artist' => $baseDir . '/app/Artist.php',
     'App\\Comment' => $baseDir . '/app/Comment.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
@@ -38,6 +38,7 @@ return array(
     'App\\Providers\\EventServiceProvider' => $baseDir . '/app/Providers/EventServiceProvider.php',
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',
     'App\\Show' => $baseDir . '/app/Show.php',
+    'App\\Singer' => $baseDir . '/app/Singer.php',
     'App\\Song' => $baseDir . '/app/Song.php',
     'App\\User' => $baseDir . '/app/User.php',
     'App\\UserDetails' => $baseDir . '/app/UserDetails.php',

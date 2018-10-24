@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class OwnSong extends Model
 {
     protected $fillable = [
-        'id_account', 'id_song'
+        'id_account', 'id_singer', 'id_artist', 'id_song'
     ];
 
     /**

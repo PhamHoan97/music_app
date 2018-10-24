@@ -4,10 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Show extends Model
+class Singer extends Model
 {
     protected $fillable = [
-        'id_account', 'id_singer', 'id_artist', 'id_song'
+        'name', 'avatar_path', 'number_my_follow', 'number_my_song', 'cover_path',
+        'birthday', 'phone_number', 'more_infor'
     ];
 
     /**
@@ -15,7 +16,8 @@ class Show extends Model
      *
      * @var array
      */
-    public $table = "rlt_shows";
+
+    public $table = "tbl_singers";
 
     public $timestamps = false;
 }

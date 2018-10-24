@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Follow extends Model
 {
     protected $fillable = [
-        'id_account', 'id_follow'
+        'id_account', 'id_follow_user', 'id_follow_singer', 'id_follow_artist'
     ];
 
     /**
