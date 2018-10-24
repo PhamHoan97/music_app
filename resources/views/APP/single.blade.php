@@ -285,9 +285,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<div class="video-record-list">
 										<div id="jp_container_1" class="jp-video jp-video-270p" role="application" aria-label="media player">
 											<div class="jp-type-playlist">
-												<div id="jquery_jplayer_1" class="jp-jplayer" style="width: 480px; height: 270px;"><img id="jp_poster_0" src="video/play1.png" style="width: 480px; height: 270px; display: inline;"><video id="jp_video_0" preload="metadata" src="http://192.168.30.9/vijayaa/2015/Dec/mosaic/web/video/Ellie-Goulding.webm" title="1. Ellie-Goulding" style="width: 0px; height: 0px;"></video></div>
+												<!-- <div id="jquery_jplayer_1" class="jp-jplayer" style="width: 480px; height: 270px;">
+													<img id="jp_poster_0" src="{!!asset('images/a10.png')!!}" style="width: 480px; height: 270px; display: inline;">
+													<video id="jp_video_0" preload="metadata" src="http://192.168.30.9/vijayaa/2015/Dec/mosaic/web/video/Ellie-Goulding.webm" title="1. Ellie-Goulding" style="width: 0px; height: 0px;">
+														
+													</video>
+												</div> -->
+												<div style="width: 480px">
+													<img id="jp_poster_0" src="{!! asset('images/a1.jpg') !!}" style="; height: 270px; display: inline;margin-bottom: 20px;">
+
+													<audio controls style="width: 82%">
+													  <source src="horse.ogg" type="audio/ogg">
+													  <source src="horse.mp3" type="audio/mpeg">
+											        </audio>
+												</div>
 												<div class="jp-gui">
-													<div class="jp-video-play" style="display: block;">
+													<!-- <div class="jp-video-play" style="display: block;">
 														<button class="jp-video-play-icon" role="button" tabindex="0">play</button>
 													</div>
 													<div class="jp-interface">
@@ -318,7 +331,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 														<div class="jp-details" style="display: none;">
 															<div class="jp-title" aria-label="title">1. Ellie-Goulding</div>
 														</div>
-													</div>
+													</div> -->
 												</div>
 
 												<div class="jp-like" style="background: white;">
@@ -393,7 +406,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<link href="{!! asset('css/jplayer.blue.monday.min.css')!!}" rel="stylesheet" type="text/css">
 				<script type="text/javascript" src="{!! asset('js/jquery.jplayer.min.js') !!}"></script>
 				<script type="text/javascript" src="{!! asset('js/jplayer.playlist.min.js') !!}"></script>
-				<script type="text/javascript">
+				<!-- <script type="text/javascript">
 				//<![CDATA[
 				$(document).ready(function(){
 
@@ -469,7 +482,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 				});
 				//]]>
-					</script>
+					</script> -->
 			<!-- //script for play-list -->
 						<!--//video-main-->
 						 	 <!-- /agileinfo -->

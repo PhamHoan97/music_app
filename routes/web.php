@@ -21,28 +21,56 @@ Route::get('/', function () {
     return view('APP.index');
 });
 
+
+// Route::get('profile1', function () {
+//     return view('APP.profile1');
+// });
+
+// Route::get('browse', function () {
+//     return view('APP.browse');
+// });
+
+// Route::get('showAllSong1', function () {
+//     return view('APP.showAllSong1');
+// });
+
+// Route::get('showAllAlbum1', function () {
+//     return view('APP.showAllAlbum1');
+// });
+
+// Route::get('notifications1', function () {
+//     return view('APP.notifications1');
+// });
+
+//
+
 Route::get('profile', function () {
     return view('APP.profile');
 });
 
+Route::get('song', function () {
+    return view('APP.song');
+});
+
+Route::get('sub', function () {
+    return view('APP.sub');
+});
+
+Route::get('moreInfor', function () {
+    return view('APP.moreInfor');
+});
+
+Route::get('album', function () {
+    return view('APP.album');
+});
+
+
 Route::get('single', function () {
-    return view('contentmail');
+    return view('APP.single');
 });
 
 Route::get('browse', function () {
     return view('APP.browse');
-});
-
-Route::get('showAllSong', function () {
-    return view('APP.showAllSong');
-});
-
-Route::get('showAllAlbum', function () {
-    return view('APP.showAllAlbum');
-});
-
-Route::get('notifications', function () {
-    return view('APP.notifications');
 });
 
 //Auth::routes();
