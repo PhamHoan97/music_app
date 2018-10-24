@@ -20,8 +20,7 @@ class CreateTblAccounts extends Migration
             $table->string('provider')->nullable();
             $table->string('provider_id')->nullable();
             $table->string('email')->unique()->nullable();
-            $table->integer('id_category')->unsigned()->nullable();
-            $table->foreign('id_category')->references('id')->on('category');
+            $table->integer('is_admin')->unsigned()->default(1);
             $table->rememberToken();
             $table->timestamps();
         });

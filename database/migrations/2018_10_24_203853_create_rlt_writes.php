@@ -15,10 +15,14 @@ class CreateRltWrites extends Migration
     {
         Schema::create('rlt_writes', function (Blueprint $table) {
             $table->increments('id_write');
-            $table->integer('id_account')->unsigned();
+            $table->integer('id_account')->unsigned()->nullable();
+            $table->integer('id_singer')->unsigned()->nullable();
+            $table->integer('id_artist')->unsigned()->nullable();
             $table->integer('id_song')->unsigned();
             $table->foreign('id_song')->references('id')->on('tbl_songs');
             $table->foreign('id_account')->references('id')->on('tbl_accounts');
+            $table->foreign('id_singer')->references('id')->on('tbl_singers');
+            $table->foreign('id_artist')->references('id')->on('tbl_artists');
             $table->rememberToken();
             $table->timestamps();
         });

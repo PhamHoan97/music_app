@@ -15,9 +15,11 @@ class CreateTblAlbum extends Migration
     {
         Schema::create('tbl_albums', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('id_account')->unsigned();
             $table->text('description');
             $table->string('album_name')->unique();
             $table->string('image_path');
+            $table->foreign('id_account')->references('id')->on('tbl_accounts');
             $table->rememberToken();
             $table->timestamps();
         });
