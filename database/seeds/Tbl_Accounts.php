@@ -15,8 +15,8 @@ class Tbl_Accounts extends Seeder
 
             ['username'=>'Tran Viet Huy', 'password'=>bcrypt('jessepinkman'), 'email'=>'huytran161297@gmail.com','is_admin'=>2],
             ['username'=>'Pham Hoan', 'password'=>bcrypt('hoandaubuoi'), 'email'=>'nhatvan97@gmail.com','is_admin'=>2],
-            ['username'=>'Phung Van Hung', 'password'=>bcrypt('hungcon1997'), 'email'=>'hungcon1997@gmail.com'],
-            ['username'=>'Bien Thanh Chung', 'password'=>bcrypt('chungbien'), 'email'=>'chungbien1997@gmail.com'],
+            ['username'=>'Phung Van Hung', 'password'=>bcrypt('hungcon1997'), 'email'=>'hungcon1997@gmail.com', 'is_admin'=>1],
+            ['username'=>'Bien Thanh Chung', 'password'=>bcrypt('chungbien'), 'email'=>'chungbien1997@gmail.com', 'is_admin'=>1],
         ]);
     }
 }
