@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Profile</title>
+	<title>Album</title>
 	<!-- Bootstrap -->
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -16,9 +16,9 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
 	<!-- My css and js -->
-	<link rel="stylesheet" type="text/css" href="{!! asset('css/profile.css') !!}">
-	<script src="{!! asset('js/profile.js') !!}"></script>
-	<script src="{!! asset('js/owl.carousel.min.js') !!}"></script>
+	<link rel="stylesheet" type="text/css" href="{!! asset('css/profile.css')!!}">
+	<script src="{!! asset('js/profile.js')!!}"></script>
+	<script src="{!! asset('js/owl.carousel.min.js')!!}"></script>
 </head>
 <body>
 	<!-- header -->
@@ -95,9 +95,7 @@
 					<!-- Hoàn Note : cái button này chỉ khi nào người đó đang ở trang cá nhân của họ thì họ mới có quyền đổi ảnh bài thôi nha m nên có 1 vòng if kiểm tra id session và id của trang cá nhân đang view đến. Nói thế thôi làm sao kệ mẹ m -->
 					
 					</div>
-
 					<button type="submit" class="btn btn-primary btn--upload__cover">Thay đổi</button>
-
 					<button type="button" class="btn btn-light btn--upload__cancel" style="color: black;">Hủy</button>
 					
 				</form>
@@ -156,10 +154,10 @@
         				<a class="nav-link" style="color: black;" href="{!! url('song') !!}">Bài hát</a>
       				</li>
       				<li class="nav-item">
-        				<a class="nav-link" style="color: black;" href="{!! url('album')!!}">Album</a>
+        				<a class="nav-link" style="color: black;" href="{!! url('album') !!}">Album</a>
       				</li>
       				<li class="nav-item">
-        				<a class="nav-link " style="color: black;" href="{!! url('sub')!!}">Trang đăng ký</a>
+        				<a class="nav-link " style="color: black;" href="{!! url('sub') !!}">Trang đăng ký</a>
       				</li>
       				<li class="nav-item">
         				<a class="nav-link " style="color: black;" href="{!! url('moreInfor')!!}">Giới thiệu</a>
@@ -170,21 +168,26 @@
 		</div>
 	</div>
 	<!-- /mini menu -->
-	<!-- Hoàn Note với Trang tổng quan thì m sẽ select ra 8 bài hát nghe nhiều nhất 
+	<!-- Hoàn Note với Trang tổng quan thì m sẽ select ra tất bài hát nghe nhiều nhất 
 
 	<!-- option -->
 	<div class="bai--hat ">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
-					<h1>Bài hát nghe nhiều</h1>
+					<h1>Album
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#upload__Song">
+						<i class="fas fa-plus"></i> Tạo album mới
+					</button>
+					</h1>
+					
 				</div>
 			</div>
 			<div class="row">
 				<!-- 1 bài hat nè --> 
-				<div class="col-lg-3 col-sm-4 col-sm-6">
+				<div class="col-lg-3 col-sm-4 col-sm-6 col">
 					<div class="card" >
-					  <img class="card-img-top" src="{!! asset('images/item1.jpg')!!}" alt="Card image cap" class="img-fluid">
+					  <img class="card-img-top" src="{!! asset('images/item1.jpg') !!}" alt="Card image cap" class="img-fluid">
 					  <div class="card-body">
 					    <h5 class="card-title">They sad</h5>
 					    <p class="card-text">Một bài hat thật là hay</p>
@@ -192,12 +195,12 @@
 					   
 					   <div class="card-button text-xl-center" >
 					   	 
-					     <a href="#" class="btn btn-primary button--add"><i class="fas fa-headphones-alt"></i>Listen</a>
+					     <a href="#" class="btn btn-primary button--add"><i class="fas fa-play"></i> Listen</a>
 					   </div>
 					  </div>
 					</div>
 				</div>
-				<div class="col-lg-3 col-sm-4 col-sm-6">
+				<div class="col-lg-3 col-sm-4 col-sm-6 col">
 					<div class="card" >
 					  <img class="card-img-top" src="{!! asset('images/item2.jpg')!!}" alt="Card image cap" class="img-fluid">
 					  <div class="card-body">
@@ -206,12 +209,12 @@
 					   <p class="card-text">800 view</p>
 					   <div class="card-button text-xl-center">
 					   	 
-					     <a href="#" class="btn btn-primary button--add"><i class="fas fa-headphones-alt"></i>Listen</a>
+					     <a href="#" class="btn btn-primary button--add"><i class="fas fa-play"></i> Listen</a>
 					   </div>
 					  </div>
 					</div>
 				</div>
-				<div class="col-lg-3 col-sm-4 col-sm-6">
+				<div class="col-lg-3 col-sm-4 col-sm-6 col">
 					<div class="card" >
 					  <img class="card-img-top" src="{!! asset('images/item3.jpg')!!}" alt="Card image cap" class="img-fluid">
 					  <div class="card-body">
@@ -220,12 +223,12 @@
 					   <p class="card-text">800 view</p>
 					   <div class="card-button text-xl-center">
 					   	 
-					     <a href="#" class="btn btn-primary button--add"><i class="fas fa-headphones-alt"></i>Listen</a>
+					     <a href="#" class="btn btn-primary button--add"><i class="fas fa-play"></i> Listen</a>
 					   </div>
 					  </div>
 					</div>
 				</div>
-				<div class="col-lg-3 col-sm-4 col-sm-6">
+				<div class="col-lg-3 col-sm-4 col-sm-6 col">
 					<div class="card" >
 					  <img class="card-img-top" src="{!! asset('images/item4.jpg')!!}" alt="Card image cap" class="img-fluid">
 					  <div class="card-body">
@@ -234,75 +237,125 @@
 					   <p class="card-text">800 view</p>
 					   <div class="card-button text-xl-center">
 					   	 
-					     <a href="#" class="btn btn-primary button--add"><i class="fas fa-headphones-alt"></i>Listen</a>
+					     <a href="#" class="btn btn-primary button--add"><i class="fas fa-play"></i> Listen</a>
 					   </div>
 					  </div>
 					</div>
 				</div>
-			</div>
-			<br>
-			<br>
-			<div class="row">
-				<!-- 1 bài hat nè --> 
-				<div class="col-lg-3 col-sm-4 col-sm-6">
+				<div class="col-lg-3 col-sm-4 col-sm-6 col">
+					<div class="card" >
+					  <img class="card-img-top" src="{!! asset('images/item5.jpg')!!}" alt="Card image cap" class="img-fluid">
+					  <div class="card-body">
+					    <h5 class="card-title">They sad</h5>
+					    <p class="card-text">Một bài hat thật là hay</p>
+					   <p class="card-text">800 view</p>
+					   <div class="card-button text-xl-center">
+					   	 
+					     <a href="#" class="btn btn-primary button--add"><i class="fas fa-play"></i> Listen</a>
+					   </div>
+					  </div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-4 col-sm-6 col">
+					<div class="card" >
+					  <img class="card-img-top" src="{!! asset('images/item6.jpg')!!}" alt="Card image cap" class="img-fluid">
+					  <div class="card-body">
+					    <h5 class="card-title">They sad</h5>
+					    <p class="card-text">Một bài hat thật là hay</p>
+					   <p class="card-text">800 view</p>
+					   <div class="card-button text-xl-center">
+					   	 
+					     <a href="#" class="btn btn-primary button--add"><i class="fas fa-play"></i> Listen</a>
+					   </div>
+					  </div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-4 col-sm-6 col">
+					<div class="card" >
+					  <img class="card-img-top" src="{!! asset('images/item7.jpg')!!}" alt="Card image cap" class="img-fluid">
+					  <div class="card-body">
+					    <h5 class="card-title">They sad</h5>
+					    <p class="card-text">Một bài hat thật là hay</p>
+					   <p class="card-text">800 view</p>
+					   <div class="card-button text-xl-center">
+					   	 
+					     <a href="#" class="btn btn-primary button--add"><i class="fas fa-play"></i> Listen</a>
+					   </div>
+					  </div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-4 col-sm-6 col">
+					<div class="card" >
+					  <img class="card-img-top" src="{!! asset('images/item8.jpg')!!}" alt="Card image cap" class="img-fluid">
+					  <div class="card-body">
+					    <h5 class="card-title">They sad</h5>
+					    <p class="card-text">Một bài hat thật là hay</p>
+					   <p class="card-text">800 view</p>
+					   <div class="card-button text-xl-center">
+					   	 
+					     <a href="#" class="btn btn-primary button--add"><i class="fas fa-play"></i> Listen</a>
+					   </div>
+					  </div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-4 col-sm-6 col">
+					<div class="card" >
+					  <img class="card-img-top" src="{!! asset('images/item9.jpg')!!}" alt="Card image cap" class="img-fluid">
+					  <div class="card-body">
+					    <h5 class="card-title">They sad</h5>
+					    <p class="card-text">Một bài hat thật là hay</p>
+					   <p class="card-text">800 view</p>
+					   <div class="card-button text-xl-center">
+					   	 
+					     <a href="#" class="btn btn-primary button--add"><i class="fas fa-play"></i> Listen</a>
+					   </div>
+					  </div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-4 col-sm-6 col">
 					<div class="card" >
 					  <img class="card-img-top" src="{!! asset('images/item1.jpg')!!}" alt="Card image cap" class="img-fluid">
 					  <div class="card-body">
 					    <h5 class="card-title">They sad</h5>
 					    <p class="card-text">Một bài hat thật là hay</p>
-					    <p class="card-text">800 view</p>
-					   
-					   <div class="card-button text-xl-center" >
-					   	 
-					     <a href="#" class="btn btn-primary button--add"><i class="fas fa-headphones-alt"></i>Listen</a>
-					   </div>
-					  </div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-4 col-sm-6">
-					<div class="card" >
-					  <img class="card-img-top" src="{!! asset('images/item2.jpg')!!}" alt="Card image cap" class="img-fluid">
-					  <div class="card-body">
-					    <h5 class="card-title">They sad</h5>
-					    <p class="card-text">Một bài hat thật là hay</p>
 					   <p class="card-text">800 view</p>
 					   <div class="card-button text-xl-center">
 					   	 
-					     <a href="#" class="btn btn-primary button--add"><i class="fas fa-headphones-alt"></i>Listen</a>
-					   </div>
-					  </div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-4 col-sm-6">
-					<div class="card" >
-					  <img class="card-img-top" src="{!! asset('images/item3.jpg')!!}" alt="Card image cap" class="img-fluid">
-					  <div class="card-body">
-					    <h5 class="card-title">They sad</h5>
-					    <p class="card-text">Một bài hat thật là hay</p>
-					   <p class="card-text">800 view</p>
-					   <div class="card-button text-xl-center">
-					   	 
-					     <a href="#" class="btn btn-primary button--add"><i class="fas fa-headphones-alt"></i>Listen</a>
-					   </div>
-					  </div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-4 col-sm-6">
-					<div class="card" >
-					  <img class="card-img-top" src="{!! asset('images/item4.jpg')!!}" alt="Card image cap" class="img-fluid">
-					  <div class="card-body">
-					    <h5 class="card-title">They sad</h5>
-					    <p class="card-text">Một bài hat thật là hay</p>
-					   <p class="card-text">800 view</p>
-					   <div class="card-button text-xl-center">
-					   	 
-					     <a href="#" class="btn btn-primary button--add"><i class="fas fa-headphones-alt"></i>Listen</a>
+					     <a href="#" class="btn btn-primary button--add"><i class="fas fa-play"></i> Listen</a>
 					   </div>
 					  </div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>	
+	</div>
+<div class="modal fade" id="upload__Song" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Tạo playlist mới</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+  			 <div class="form-group">
+    			<label for="exampleInputEmail1"> <i class="fas fa-headset"></i> Tên playlist</label>
+    			<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Tên...">
+  			</div>
+  			<div class="form-group">
+    			<label> <i class="fas fa-anchor"></i> Mô tả</label>
+    			<textarea class="form-control upload__mota" id="exampleFormControlTextarea1" rows="3"></textarea>
+  			</div>
+		</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Upload</button>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>

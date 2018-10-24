@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Profile</title>
+	<title>Thông tin chi tiết</title>
 	<!-- Bootstrap -->
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -16,9 +16,9 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
 	<!-- My css and js -->
-	<link rel="stylesheet" type="text/css" href="{!! asset('css/profile.css') !!}">
-	<script src="{!! asset('js/profile.js') !!}"></script>
-	<script src="{!! asset('js/owl.carousel.min.js') !!}"></script>
+	<link rel="stylesheet" type="text/css" href="{!! asset('css/profile.css')!!}">
+	<script src="{!! asset('js/profile.js')!!}"></script>
+	<script src="{!! asset('js/owl.carousel.min.js')!!}"></script>
 </head>
 <body>
 	<!-- header -->
@@ -52,7 +52,7 @@
 					<div class="dropdown header--profile">
   						<button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
    					 		<span class="header--profile__avatar">
-   					 			<img src="{!! asset('images/avatar.png')!!}" alt="" class="img-fluid">
+   					 			<img src="{!! asset('images/avatar.png') !!}" alt="" class="img-fluid">
    					 		</span>
    					 		<span class="header--profile__name">
    					 			Biện Thành Chung
@@ -84,7 +84,7 @@
 		<div class="container">
 			<div class="row">
 				<form action="" class="" method="get" accept-charset="utf-8">
-					<img src="{!! asset('images/image_cover.jpg')!!}" alt="" class="banner--cover">
+					<img src="{!! asset('images/image_cover.jpg') !!}" alt="" class="banner--cover">
 					<div class="banner--upload">
 					
 						<label>
@@ -95,9 +95,7 @@
 					<!-- Hoàn Note : cái button này chỉ khi nào người đó đang ở trang cá nhân của họ thì họ mới có quyền đổi ảnh bài thôi nha m nên có 1 vòng if kiểm tra id session và id của trang cá nhân đang view đến. Nói thế thôi làm sao kệ mẹ m -->
 					
 					</div>
-
 					<button type="submit" class="btn btn-primary btn--upload__cover">Thay đổi</button>
-
 					<button type="button" class="btn btn-light btn--upload__cancel" style="color: black;">Hủy</button>
 					
 				</form>
@@ -156,10 +154,10 @@
         				<a class="nav-link" style="color: black;" href="{!! url('song') !!}">Bài hát</a>
       				</li>
       				<li class="nav-item">
-        				<a class="nav-link" style="color: black;" href="{!! url('album')!!}">Album</a>
+        				<a class="nav-link" style="color: black;" href="{!! url('album') !!}">Album</a>
       				</li>
       				<li class="nav-item">
-        				<a class="nav-link " style="color: black;" href="{!! url('sub')!!}">Trang đăng ký</a>
+        				<a class="nav-link " style="color: black;" href="{!! url('sub') !!}">Trang đăng ký</a>
       				</li>
       				<li class="nav-item">
         				<a class="nav-link " style="color: black;" href="{!! url('moreInfor')!!}">Giới thiệu</a>
@@ -170,139 +168,57 @@
 		</div>
 	</div>
 	<!-- /mini menu -->
-	<!-- Hoàn Note với Trang tổng quan thì m sẽ select ra 8 bài hát nghe nhiều nhất 
+	<!-- Hoàn Note với Trang tổng quan thì m sẽ select ra tất bài hát nghe nhiều nhất 
 
 	<!-- option -->
-	<div class="bai--hat ">
+	<div class="more--infor">
 		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<h1>Bài hát nghe nhiều</h1>
-				</div>
-			</div>
-			<div class="row">
-				<!-- 1 bài hat nè --> 
-				<div class="col-lg-3 col-sm-4 col-sm-6">
-					<div class="card" >
-					  <img class="card-img-top" src="{!! asset('images/item1.jpg')!!}" alt="Card image cap" class="img-fluid">
-					  <div class="card-body">
-					    <h5 class="card-title">They sad</h5>
-					    <p class="card-text">Một bài hat thật là hay</p>
-					    <p class="card-text">800 view</p>
-					   
-					   <div class="card-button text-xl-center" >
-					   	 
-					     <a href="#" class="btn btn-primary button--add"><i class="fas fa-headphones-alt"></i>Listen</a>
-					   </div>
-					  </div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-4 col-sm-6">
-					<div class="card" >
-					  <img class="card-img-top" src="{!! asset('images/item2.jpg')!!}" alt="Card image cap" class="img-fluid">
-					  <div class="card-body">
-					    <h5 class="card-title">They sad</h5>
-					    <p class="card-text">Một bài hat thật là hay</p>
-					   <p class="card-text">800 view</p>
-					   <div class="card-button text-xl-center">
-					   	 
-					     <a href="#" class="btn btn-primary button--add"><i class="fas fa-headphones-alt"></i>Listen</a>
-					   </div>
-					  </div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-4 col-sm-6">
-					<div class="card" >
-					  <img class="card-img-top" src="{!! asset('images/item3.jpg')!!}" alt="Card image cap" class="img-fluid">
-					  <div class="card-body">
-					    <h5 class="card-title">They sad</h5>
-					    <p class="card-text">Một bài hat thật là hay</p>
-					   <p class="card-text">800 view</p>
-					   <div class="card-button text-xl-center">
-					   	 
-					     <a href="#" class="btn btn-primary button--add"><i class="fas fa-headphones-alt"></i>Listen</a>
-					   </div>
-					  </div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-4 col-sm-6">
-					<div class="card" >
-					  <img class="card-img-top" src="{!! asset('images/item4.jpg')!!}" alt="Card image cap" class="img-fluid">
-					  <div class="card-body">
-					    <h5 class="card-title">They sad</h5>
-					    <p class="card-text">Một bài hat thật là hay</p>
-					   <p class="card-text">800 view</p>
-					   <div class="card-button text-xl-center">
-					   	 
-					     <a href="#" class="btn btn-primary button--add"><i class="fas fa-headphones-alt"></i>Listen</a>
-					   </div>
-					  </div>
-					</div>
-				</div>
-			</div>
-			<br>
-			<br>
-			<div class="row">
-				<!-- 1 bài hat nè --> 
-				<div class="col-lg-3 col-sm-4 col-sm-6">
-					<div class="card" >
-					  <img class="card-img-top" src="{!! asset('images/item1.jpg')!!}" alt="Card image cap" class="img-fluid">
-					  <div class="card-body">
-					    <h5 class="card-title">They sad</h5>
-					    <p class="card-text">Một bài hat thật là hay</p>
-					    <p class="card-text">800 view</p>
-					   
-					   <div class="card-button text-xl-center" >
-					   	 
-					     <a href="#" class="btn btn-primary button--add"><i class="fas fa-headphones-alt"></i>Listen</a>
-					   </div>
-					  </div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-4 col-sm-6">
-					<div class="card" >
-					  <img class="card-img-top" src="{!! asset('images/item2.jpg')!!}" alt="Card image cap" class="img-fluid">
-					  <div class="card-body">
-					    <h5 class="card-title">They sad</h5>
-					    <p class="card-text">Một bài hat thật là hay</p>
-					   <p class="card-text">800 view</p>
-					   <div class="card-button text-xl-center">
-					   	 
-					     <a href="#" class="btn btn-primary button--add"><i class="fas fa-headphones-alt"></i>Listen</a>
-					   </div>
-					  </div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-4 col-sm-6">
-					<div class="card" >
-					  <img class="card-img-top" src="{!! asset('images/item3.jpg')!!}" alt="Card image cap" class="img-fluid">
-					  <div class="card-body">
-					    <h5 class="card-title">They sad</h5>
-					    <p class="card-text">Một bài hat thật là hay</p>
-					   <p class="card-text">800 view</p>
-					   <div class="card-button text-xl-center">
-					   	 
-					     <a href="#" class="btn btn-primary button--add"><i class="fas fa-headphones-alt"></i>Listen</a>
-					   </div>
-					  </div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-4 col-sm-6">
-					<div class="card" >
-					  <img class="card-img-top" src="{!! asset('images/item4.jpg')!!}" alt="Card image cap" class="img-fluid">
-					  <div class="card-body">
-					    <h5 class="card-title">They sad</h5>
-					    <p class="card-text">Một bài hat thật là hay</p>
-					   <p class="card-text">800 view</p>
-					   <div class="card-button text-xl-center">
-					   	 
-					     <a href="#" class="btn btn-primary button--add"><i class="fas fa-headphones-alt"></i>Listen</a>
-					   </div>
-					  </div>
-					</div>
-				</div>
+			<table class="table" style="float: right; width: 40%;">
+				<thead >
+    				<tr>
+      					<th scope="col"><h2>
+      						Thống kê
+      					</h2></th>
+      					<th scope="col"></th>
+      
+    				</tr>
+  				</thead>
+	  			<tbody >
+		    		<tr>
+		      			<th scope="row">Tên</th>
+		      			<td>Phùng Thành Độ</td>
+		      			
+		    		</tr>
+		    		<tr>
+		      			<th scope="row">Số bài hát</th>
+		      			<td>5</td>
+		      			
+		    		</tr>
+		    		<tr>
+		      			<th scope="row">Số album</th>
+		      			<td>10</td>
+		      			
+		    		</tr>
+		    		<tr>
+		      			<th scope="row">Lượt nghe</th>
+		      			<td>405.293.932 lượt nghe</td>
+		    		</tr>
+	  			</tbody>
+			</table>
+			<div class="description" style="float: right; width: 60%;">
+				<h2>Mô tả</h2>
+				- Mình là Độ -
+				<br>
+				- Thỉnh thoảng rảnh chó ko có gì làm mình hay edit clip vui, tất cả đều do team mình chơi tự nhiên, trong clip có khá nhiều từ ngữ bậy bạ nên các bạn lưu ý xung quanh trước khi xem - 
+				<br>
+				- Hãy like, share, và sub nếu bạn thấy clip hay để mình có động lực ra mắt các sản phẩm tiếp theo :3 cám ơn tất cả các bạn đã quan tâm và theo dói -
+				<br>
+				FaceBook:  https://www.facebook.com/MixiGaming
+				<br>
+				Steam: https://steamcommunity.com/id/mixinguyen
 			</div>
 		</div>
-	</div>	
+
+	</div>
 </body>
 </html>

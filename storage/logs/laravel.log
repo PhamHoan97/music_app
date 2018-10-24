@@ -3700,7 +3700,8 @@ Did you mean this?
 [stacktrace]
 #0 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(341): Swift_Transport_AbstractSmtpTransport->assertResponseCode('530 5.7.1 Authe...', Array)
 #1 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('MAIL FROM:<hell...', Array, Array, false, NULL)
-#2 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(390): Swift_Transport_EsmtpTransport->executeCommand('DATA\\
+#2 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(390): Swift_Transport_EsmtpTransport->executeCommand('DATA\
+\
 ', Array, Array)
 #3 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(497): Swift_Transport_AbstractSmtpTransport->doDataCommand(Array)
 #4 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(516): Swift_Transport_AbstractSmtpTransport->doMailTransaction(Object(Swift_Message), 'hello@example.c...', Array, Array)
@@ -3779,7 +3780,8 @@ Did you mean this?
 [stacktrace]
 #0 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(341): Swift_Transport_AbstractSmtpTransport->assertResponseCode('530 5.7.1 Authe...', Array)
 #1 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('MAIL FROM:<hell...', Array, Array, false, NULL)
-#2 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(390): Swift_Transport_EsmtpTransport->executeCommand('DATA\\
+#2 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(390): Swift_Transport_EsmtpTransport->executeCommand('DATA\
+\
 ', Array, Array)
 #3 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(497): Swift_Transport_AbstractSmtpTransport->doDataCommand(Array)
 #4 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(516): Swift_Transport_AbstractSmtpTransport->doMailTransaction(Object(Swift_Message), 'hello@example.c...', Array, Array)
@@ -3858,7 +3860,8 @@ Did you mean this?
 [stacktrace]
 #0 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(341): Swift_Transport_AbstractSmtpTransport->assertResponseCode('530 5.7.1 Authe...', Array)
 #1 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('MAIL FROM:<hell...', Array, Array, false, NULL)
-#2 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(390): Swift_Transport_EsmtpTransport->executeCommand('DATA\\
+#2 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(390): Swift_Transport_EsmtpTransport->executeCommand('DATA\
+\
 ', Array, Array)
 #3 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(497): Swift_Transport_AbstractSmtpTransport->doDataCommand(Array)
 #4 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(516): Swift_Transport_AbstractSmtpTransport->doMailTransaction(Object(Swift_Message), 'hello@example.c...', Array, Array)
@@ -3937,7 +3940,8 @@ Did you mean this?
 [stacktrace]
 #0 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(341): Swift_Transport_AbstractSmtpTransport->assertResponseCode('530 5.7.1 Authe...', Array)
 #1 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('MAIL FROM:<hell...', Array, Array, false, NULL)
-#2 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(390): Swift_Transport_EsmtpTransport->executeCommand('DATA\\
+#2 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(390): Swift_Transport_EsmtpTransport->executeCommand('DATA\
+\
 ', Array, Array)
 #3 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(497): Swift_Transport_AbstractSmtpTransport->doDataCommand(Array)
 #4 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(516): Swift_Transport_AbstractSmtpTransport->doMailTransaction(Object(Swift_Message), 'hello@example.c...', Array, Array)
@@ -4016,7 +4020,8 @@ Did you mean this?
 [stacktrace]
 #0 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(341): Swift_Transport_AbstractSmtpTransport->assertResponseCode('530 5.7.1 Authe...', Array)
 #1 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('MAIL FROM:<hell...', Array, Array, false, NULL)
-#2 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(390): Swift_Transport_EsmtpTransport->executeCommand('DATA\\
+#2 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(390): Swift_Transport_EsmtpTransport->executeCommand('DATA\
+\
 ', Array, Array)
 #3 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(497): Swift_Transport_AbstractSmtpTransport->doDataCommand(Array)
 #4 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(516): Swift_Transport_AbstractSmtpTransport->doMailTransaction(Object(Swift_Message), 'hello@example.c...', Array, Array)
@@ -4095,7 +4100,8 @@ Did you mean this?
 [stacktrace]
 #0 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(341): Swift_Transport_AbstractSmtpTransport->assertResponseCode('530 5.7.1 Authe...', Array)
 #1 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('MAIL FROM:<hell...', Array, Array, false, NULL)
-#2 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(390): Swift_Transport_EsmtpTransport->executeCommand('DATA\\
+#2 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(390): Swift_Transport_EsmtpTransport->executeCommand('DATA\
+\
 ', Array, Array)
 #3 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(497): Swift_Transport_AbstractSmtpTransport->doDataCommand(Array)
 #4 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(516): Swift_Transport_AbstractSmtpTransport->doMailTransaction(Object(Swift_Message), 'hello@example.c...', Array, Array)
@@ -4174,7 +4180,8 @@ Did you mean this?
 [stacktrace]
 #0 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(341): Swift_Transport_AbstractSmtpTransport->assertResponseCode('530 5.7.1 Authe...', Array)
 #1 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('MAIL FROM:<hell...', Array, Array, false, NULL)
-#2 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(390): Swift_Transport_EsmtpTransport->executeCommand('DATA\\
+#2 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(390): Swift_Transport_EsmtpTransport->executeCommand('DATA\
+\
 ', Array, Array)
 #3 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(497): Swift_Transport_AbstractSmtpTransport->doDataCommand(Array)
 #4 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(516): Swift_Transport_AbstractSmtpTransport->doMailTransaction(Object(Swift_Message), 'hello@example.c...', Array, Array)
@@ -4253,7 +4260,8 @@ Did you mean this?
 [stacktrace]
 #0 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(341): Swift_Transport_AbstractSmtpTransport->assertResponseCode('530 5.7.1 Authe...', Array)
 #1 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('MAIL FROM:<hell...', Array, Array, false, NULL)
-#2 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(390): Swift_Transport_EsmtpTransport->executeCommand('DATA\\
+#2 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(390): Swift_Transport_EsmtpTransport->executeCommand('DATA\
+\
 ', Array, Array)
 #3 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(497): Swift_Transport_AbstractSmtpTransport->doDataCommand(Array)
 #4 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(516): Swift_Transport_AbstractSmtpTransport->doMailTransaction(Object(Swift_Message), 'hello@example.c...', Array, Array)
@@ -4332,7 +4340,8 @@ Did you mean this?
 [stacktrace]
 #0 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(341): Swift_Transport_AbstractSmtpTransport->assertResponseCode('530 5.7.1 Authe...', Array)
 #1 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('MAIL FROM:<hell...', Array, Array, false, NULL)
-#2 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(390): Swift_Transport_EsmtpTransport->executeCommand('DATA\\
+#2 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(390): Swift_Transport_EsmtpTransport->executeCommand('DATA\
+\
 ', Array, Array)
 #3 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(497): Swift_Transport_AbstractSmtpTransport->doDataCommand(Array)
 #4 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(516): Swift_Transport_AbstractSmtpTransport->doMailTransaction(Object(Swift_Message), 'hello@example.c...', Array, Array)
@@ -4411,7 +4420,8 @@ Did you mean this?
 [stacktrace]
 #0 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(341): Swift_Transport_AbstractSmtpTransport->assertResponseCode('530 5.7.1 Authe...', Array)
 #1 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('MAIL FROM:<hell...', Array, Array, false, NULL)
-#2 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(390): Swift_Transport_EsmtpTransport->executeCommand('DATA\\
+#2 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(390): Swift_Transport_EsmtpTransport->executeCommand('DATA\
+\
 ', Array, Array)
 #3 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(497): Swift_Transport_AbstractSmtpTransport->doDataCommand(Array)
 #4 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(516): Swift_Transport_AbstractSmtpTransport->doMailTransaction(Object(Swift_Message), 'hello@example.c...', Array, Array)
@@ -4490,7 +4500,8 @@ Did you mean this?
 [stacktrace]
 #0 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(341): Swift_Transport_AbstractSmtpTransport->assertResponseCode('530 5.7.1 Authe...', Array)
 #1 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('MAIL FROM:<hell...', Array, Array, false, NULL)
-#2 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(390): Swift_Transport_EsmtpTransport->executeCommand('DATA\\
+#2 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(390): Swift_Transport_EsmtpTransport->executeCommand('DATA\
+\
 ', Array, Array)
 #3 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(497): Swift_Transport_AbstractSmtpTransport->doDataCommand(Array)
 #4 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(516): Swift_Transport_AbstractSmtpTransport->doMailTransaction(Object(Swift_Message), 'hello@example.c...', Array, Array)
@@ -4569,7 +4580,8 @@ Did you mean this?
 [stacktrace]
 #0 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(341): Swift_Transport_AbstractSmtpTransport->assertResponseCode('530 5.7.1 Authe...', Array)
 #1 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('MAIL FROM:<hell...', Array, Array, false, NULL)
-#2 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(390): Swift_Transport_EsmtpTransport->executeCommand('DATA\\
+#2 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(390): Swift_Transport_EsmtpTransport->executeCommand('DATA\
+\
 ', Array, Array)
 #3 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(497): Swift_Transport_AbstractSmtpTransport->doDataCommand(Array)
 #4 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(516): Swift_Transport_AbstractSmtpTransport->doMailTransaction(Object(Swift_Message), 'hello@example.c...', Array, Array)
@@ -4648,7 +4660,8 @@ Did you mean this?
 [stacktrace]
 #0 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(341): Swift_Transport_AbstractSmtpTransport->assertResponseCode('530 5.7.1 Authe...', Array)
 #1 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('MAIL FROM:<hell...', Array, Array, false, NULL)
-#2 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(390): Swift_Transport_EsmtpTransport->executeCommand('DATA\\
+#2 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(390): Swift_Transport_EsmtpTransport->executeCommand('DATA\
+\
 ', Array, Array)
 #3 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(497): Swift_Transport_AbstractSmtpTransport->doDataCommand(Array)
 #4 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(516): Swift_Transport_AbstractSmtpTransport->doMailTransaction(Object(Swift_Message), 'hello@example.c...', Array, Array)
@@ -4727,7 +4740,8 @@ Did you mean this?
 [stacktrace]
 #0 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(341): Swift_Transport_AbstractSmtpTransport->assertResponseCode('530 5.7.1 Authe...', Array)
 #1 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('MAIL FROM:<hell...', Array, Array, false, NULL)
-#2 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(390): Swift_Transport_EsmtpTransport->executeCommand('DATA\\
+#2 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(390): Swift_Transport_EsmtpTransport->executeCommand('DATA\
+\
 ', Array, Array)
 #3 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(497): Swift_Transport_AbstractSmtpTransport->doDataCommand(Array)
 #4 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(516): Swift_Transport_AbstractSmtpTransport->doMailTransaction(Object(Swift_Message), 'hello@example.c...', Array, Array)
@@ -4806,7 +4820,8 @@ Did you mean this?
 [stacktrace]
 #0 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(341): Swift_Transport_AbstractSmtpTransport->assertResponseCode('530 5.7.1 Authe...', Array)
 #1 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('MAIL FROM:<hell...', Array, Array, false, NULL)
-#2 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(390): Swift_Transport_EsmtpTransport->executeCommand('DATA\\
+#2 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(390): Swift_Transport_EsmtpTransport->executeCommand('DATA\
+\
 ', Array, Array)
 #3 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(497): Swift_Transport_AbstractSmtpTransport->doDataCommand(Array)
 #4 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(516): Swift_Transport_AbstractSmtpTransport->doMailTransaction(Object(Swift_Message), 'hello@example.c...', Array, Array)
@@ -5211,9 +5226,11 @@ Stack trace:
 \" in /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:457
 Stack trace:
 #0 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(341): Swift_Transport_AbstractSmtpTransport->assertResponseCode('534-5.7.14 <htt...', Array)
-#1 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('dHJhbmh1eTE=\\
+#1 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('dHJhbmh1eTE=\
+\
 ', Array, Array, false, NULL)
-#2 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/LoginAuthenticator.php(36): Swift_Transport_EsmtpTransport->executeCommand('dHJhbmh1eTE=\\
+#2 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/LoginAuthenticator.php(36): Swift_Transport_EsmtpTransport->executeCommand('dHJhbmh1eTE=\
+\
 ', Array)
 #3 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/AuthHandler.php(177): Swift_Transport_Esmtp_Auth_LoginAuthenticator->authenticate(Object(Swift_SmtpTransport), 'huytran161297@g...', 'tranhuy1')
 #4 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(371): Swift_Transport_Esmtp_AuthHandler->afterEhlo(Object(Swift_SmtpTransport))
@@ -5374,9 +5391,11 @@ Stack trace:
 \" in /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:457
 Stack trace:
 #0 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(341): Swift_Transport_AbstractSmtpTransport->assertResponseCode('535-5.7.8 Usern...', Array)
-#1 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\\
+#1 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\
+\
 ', Array, Array, false, NULL)
-#2 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php(49): Swift_Transport_EsmtpTransport->executeCommand('RSET\\
+#2 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php(49): Swift_Transport_EsmtpTransport->executeCommand('RSET\
+\
 ', Array)
 #3 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/AuthHandler.php(177): Swift_Transport_Esmtp_Auth_XOAuth2Authenticator->authenticate(Object(Swift_SmtpTransport), 'huytran161297@g...', 'tranhuy1')
 #4 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(371): Swift_Transport_Esmtp_AuthHandler->afterEhlo(Object(Swift_SmtpTransport))
@@ -5779,9 +5798,11 @@ Stack trace:
 \" in /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:457
 Stack trace:
 #0 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(341): Swift_Transport_AbstractSmtpTransport->assertResponseCode('534-5.7.14 <htt...', Array)
-#1 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('dHJhbmh1eTE=\\
+#1 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('dHJhbmh1eTE=\
+\
 ', Array, Array, false, NULL)
-#2 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/LoginAuthenticator.php(36): Swift_Transport_EsmtpTransport->executeCommand('dHJhbmh1eTE=\\
+#2 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/LoginAuthenticator.php(36): Swift_Transport_EsmtpTransport->executeCommand('dHJhbmh1eTE=\
+\
 ', Array)
 #3 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/AuthHandler.php(177): Swift_Transport_Esmtp_Auth_LoginAuthenticator->authenticate(Object(Swift_SmtpTransport), 'huytran161297@g...', 'tranhuy1')
 #4 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(371): Swift_Transport_Esmtp_AuthHandler->afterEhlo(Object(Swift_SmtpTransport))
@@ -5942,9 +5963,11 @@ Stack trace:
 \" in /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:457
 Stack trace:
 #0 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(341): Swift_Transport_AbstractSmtpTransport->assertResponseCode('535-5.7.8 Usern...', Array)
-#1 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\\
+#1 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\
+\
 ', Array, Array, false, NULL)
-#2 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php(49): Swift_Transport_EsmtpTransport->executeCommand('RSET\\
+#2 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php(49): Swift_Transport_EsmtpTransport->executeCommand('RSET\
+\
 ', Array)
 #3 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/AuthHandler.php(177): Swift_Transport_Esmtp_Auth_XOAuth2Authenticator->authenticate(Object(Swift_SmtpTransport), 'huytran161297@g...', 'tranhuy1')
 #4 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(371): Swift_Transport_Esmtp_AuthHandler->afterEhlo(Object(Swift_SmtpTransport))
@@ -6508,9 +6531,11 @@ Stack trace:
 \" in /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:457
 Stack trace:
 #0 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(341): Swift_Transport_AbstractSmtpTransport->assertResponseCode('535-5.7.8 Usern...', Array)
-#1 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\\
+#1 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\
+\
 ', Array, Array, false, NULL)
-#2 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php(49): Swift_Transport_EsmtpTransport->executeCommand('RSET\\
+#2 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php(49): Swift_Transport_EsmtpTransport->executeCommand('RSET\
+\
 ', Array)
 #3 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/AuthHandler.php(177): Swift_Transport_Esmtp_Auth_XOAuth2Authenticator->authenticate(Object(Swift_SmtpTransport), 'roseareroses199...', 'tranhuy123')
 #4 /var/www/html/music-app/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(371): Swift_Transport_Esmtp_AuthHandler->afterEhlo(Object(Swift_SmtpTransport))
@@ -13083,9 +13108,11 @@ Stack trace:
 \" in /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:457
 Stack trace:
 #0 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(341): Swift_Transport_AbstractSmtpTransport->assertResponseCode('535-5.7.8 Usern...', Array)
-#1 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\\
+#1 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\
+\
 ', Array, Array, false, NULL)
-#2 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php(49): Swift_Transport_EsmtpTransport->executeCommand('RSET\\
+#2 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php(49): Swift_Transport_EsmtpTransport->executeCommand('RSET\
+\
 ', Array)
 #3 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/AuthHandler.php(177): Swift_Transport_Esmtp_Auth_XOAuth2Authenticator->authenticate(Object(Swift_SmtpTransport), 'roseareroses199...', 'tranhuy123')
 #4 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(371): Swift_Transport_Esmtp_AuthHandler->afterEhlo(Object(Swift_SmtpTransport))
@@ -13567,9 +13594,11 @@ Stack trace:
 \" in /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:457
 Stack trace:
 #0 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(341): Swift_Transport_AbstractSmtpTransport->assertResponseCode('535-5.7.8 Usern...', Array)
-#1 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\\
+#1 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\
+\
 ', Array, Array, false, NULL)
-#2 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php(49): Swift_Transport_EsmtpTransport->executeCommand('RSET\\
+#2 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php(49): Swift_Transport_EsmtpTransport->executeCommand('RSET\
+\
 ', Array)
 #3 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/AuthHandler.php(177): Swift_Transport_Esmtp_Auth_XOAuth2Authenticator->authenticate(Object(Swift_SmtpTransport), 'roseareroses199...', 'tranhuy123')
 #4 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(371): Swift_Transport_Esmtp_AuthHandler->afterEhlo(Object(Swift_SmtpTransport))
@@ -14051,9 +14080,11 @@ Stack trace:
 \" in /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:457
 Stack trace:
 #0 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(341): Swift_Transport_AbstractSmtpTransport->assertResponseCode('535-5.7.8 Usern...', Array)
-#1 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\\
+#1 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\
+\
 ', Array, Array, false, NULL)
-#2 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php(49): Swift_Transport_EsmtpTransport->executeCommand('RSET\\
+#2 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php(49): Swift_Transport_EsmtpTransport->executeCommand('RSET\
+\
 ', Array)
 #3 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/AuthHandler.php(177): Swift_Transport_Esmtp_Auth_XOAuth2Authenticator->authenticate(Object(Swift_SmtpTransport), 'roseareroses199...', 'tranhuy123')
 #4 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(371): Swift_Transport_Esmtp_AuthHandler->afterEhlo(Object(Swift_SmtpTransport))
@@ -14535,9 +14566,11 @@ Stack trace:
 \" in /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:457
 Stack trace:
 #0 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(341): Swift_Transport_AbstractSmtpTransport->assertResponseCode('535-5.7.8 Usern...', Array)
-#1 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\\
+#1 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\
+\
 ', Array, Array, false, NULL)
-#2 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php(49): Swift_Transport_EsmtpTransport->executeCommand('RSET\\
+#2 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php(49): Swift_Transport_EsmtpTransport->executeCommand('RSET\
+\
 ', Array)
 #3 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/AuthHandler.php(177): Swift_Transport_Esmtp_Auth_XOAuth2Authenticator->authenticate(Object(Swift_SmtpTransport), 'roseareroses199...', 'tranhuy123')
 #4 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(371): Swift_Transport_Esmtp_AuthHandler->afterEhlo(Object(Swift_SmtpTransport))
@@ -15019,9 +15052,11 @@ Stack trace:
 \" in /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:457
 Stack trace:
 #0 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(341): Swift_Transport_AbstractSmtpTransport->assertResponseCode('535-5.7.8 Usern...', Array)
-#1 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\\
+#1 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\
+\
 ', Array, Array, false, NULL)
-#2 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php(49): Swift_Transport_EsmtpTransport->executeCommand('RSET\\
+#2 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php(49): Swift_Transport_EsmtpTransport->executeCommand('RSET\
+\
 ', Array)
 #3 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/AuthHandler.php(177): Swift_Transport_Esmtp_Auth_XOAuth2Authenticator->authenticate(Object(Swift_SmtpTransport), 'roseareroses199...', 'tranhuy123')
 #4 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(371): Swift_Transport_Esmtp_AuthHandler->afterEhlo(Object(Swift_SmtpTransport))
@@ -15503,9 +15538,11 @@ Stack trace:
 \" in /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:457
 Stack trace:
 #0 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(341): Swift_Transport_AbstractSmtpTransport->assertResponseCode('535-5.7.8 Usern...', Array)
-#1 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\\
+#1 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\
+\
 ', Array, Array, false, NULL)
-#2 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php(49): Swift_Transport_EsmtpTransport->executeCommand('RSET\\
+#2 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php(49): Swift_Transport_EsmtpTransport->executeCommand('RSET\
+\
 ', Array)
 #3 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/AuthHandler.php(177): Swift_Transport_Esmtp_Auth_XOAuth2Authenticator->authenticate(Object(Swift_SmtpTransport), 'roseareroses199...', 'tranhuy123')
 #4 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(371): Swift_Transport_Esmtp_AuthHandler->afterEhlo(Object(Swift_SmtpTransport))
@@ -15987,9 +16024,11 @@ Stack trace:
 \" in /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:457
 Stack trace:
 #0 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(341): Swift_Transport_AbstractSmtpTransport->assertResponseCode('535-5.7.8 Usern...', Array)
-#1 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\\
+#1 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\
+\
 ', Array, Array, false, NULL)
-#2 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php(49): Swift_Transport_EsmtpTransport->executeCommand('RSET\\
+#2 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php(49): Swift_Transport_EsmtpTransport->executeCommand('RSET\
+\
 ', Array)
 #3 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/AuthHandler.php(177): Swift_Transport_Esmtp_Auth_XOAuth2Authenticator->authenticate(Object(Swift_SmtpTransport), 'roseareroses199...', 'tranhuy123')
 #4 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(371): Swift_Transport_Esmtp_AuthHandler->afterEhlo(Object(Swift_SmtpTransport))
@@ -16471,9 +16510,11 @@ Stack trace:
 \" in /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:457
 Stack trace:
 #0 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(341): Swift_Transport_AbstractSmtpTransport->assertResponseCode('535-5.7.8 Usern...', Array)
-#1 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\\
+#1 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\
+\
 ', Array, Array, false, NULL)
-#2 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php(49): Swift_Transport_EsmtpTransport->executeCommand('RSET\\
+#2 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php(49): Swift_Transport_EsmtpTransport->executeCommand('RSET\
+\
 ', Array)
 #3 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/AuthHandler.php(177): Swift_Transport_Esmtp_Auth_XOAuth2Authenticator->authenticate(Object(Swift_SmtpTransport), 'roseareroses199...', 'tranhuy123')
 #4 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(371): Swift_Transport_Esmtp_AuthHandler->afterEhlo(Object(Swift_SmtpTransport))
@@ -16955,9 +16996,11 @@ Stack trace:
 \" in /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:457
 Stack trace:
 #0 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(341): Swift_Transport_AbstractSmtpTransport->assertResponseCode('535-5.7.8 Usern...', Array)
-#1 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\\
+#1 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\
+\
 ', Array, Array, false, NULL)
-#2 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php(49): Swift_Transport_EsmtpTransport->executeCommand('RSET\\
+#2 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php(49): Swift_Transport_EsmtpTransport->executeCommand('RSET\
+\
 ', Array)
 #3 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/AuthHandler.php(177): Swift_Transport_Esmtp_Auth_XOAuth2Authenticator->authenticate(Object(Swift_SmtpTransport), 'roseareroses199...', 'tranhuy123')
 #4 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(371): Swift_Transport_Esmtp_AuthHandler->afterEhlo(Object(Swift_SmtpTransport))
@@ -17439,9 +17482,11 @@ Stack trace:
 \" in /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php:457
 Stack trace:
 #0 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(341): Swift_Transport_AbstractSmtpTransport->assertResponseCode('535-5.7.8 Usern...', Array)
-#1 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\\
+#1 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(305): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\
+\
 ', Array, Array, false, NULL)
-#2 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php(49): Swift_Transport_EsmtpTransport->executeCommand('RSET\\
+#2 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/Auth/XOAuth2Authenticator.php(49): Swift_Transport_EsmtpTransport->executeCommand('RSET\
+\
 ', Array)
 #3 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/Esmtp/AuthHandler.php(177): Swift_Transport_Esmtp_Auth_XOAuth2Authenticator->authenticate(Object(Swift_SmtpTransport), 'roseareroses199...', 'tranhuy123')
 #4 /var/www/html/musicapp2018/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/EsmtpTransport.php(371): Swift_Transport_Esmtp_AuthHandler->afterEhlo(Object(Swift_SmtpTransport))
@@ -18055,6 +18100,7 @@ Stack trace:
 #61 /var/www/html/musicapp2018/public/index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #62 {main}
 "} 
+
 [2018-10-24 14:08:34] local.ERROR: SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint (SQL: alter table `rlt_own_songs` add constraint `rlt_own_songs_id_singer_foreign` foreign key (`id_singer`) references `tbl_singers` (`id`)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: HY000): SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint (SQL: alter table `rlt_own_songs` add constraint `rlt_own_songs_id_singer_foreign` foreign key (`id_singer`) references `tbl_singers` (`id`)) at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:664, PDOException(code: HY000): SQLSTATE[HY000]: General error: 1215 Cannot add foreign key constraint at /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php:458)
 [stacktrace]
 #0 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Database/Connection.php(624): Illuminate\\Database\\Connection->runQueryCallback('alter table `rl...', Array, Object(Closure))
@@ -18327,4 +18373,30 @@ Did you mean one of these?
 #25 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #26 /var/www/html/musicapp2018/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #27 {main}
+
+"} 
+[2018-10-24 21:28:46] local.ERROR: Command "cache:clean" is not defined.
+
+Did you mean one of these?
+    cache:clear
+    cache:forget
+    cache:table
+    config:clear
+    route:clear
+    view:clear {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"cache:clean\" is not defined.
+
+Did you mean one of these?
+    cache:clear
+    cache:forget
+    cache:table
+    config:clear
+    route:clear
+    view:clear at /var/www/html/musicapp2018/vendor/symfony/console/Application.php:618)
+[stacktrace]
+#0 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(229): Symfony\\Component\\Console\\Application->find('cache:clean')
+#1 /var/www/html/musicapp2018/vendor/symfony/console/Application.php(148): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Console/Application.php(88): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /var/www/html/musicapp2018/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /var/www/html/musicapp2018/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
 "} 
