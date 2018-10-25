@@ -73,6 +73,17 @@ Route::get('browse', function () {
     return view('APP.browse');
 });
 
+Route::get('admin', function () {
+    return view('APP.admin');
+});
+
+Route::get('admin_singer', function () {
+    return view('APP.admin_singer');
+});
+
+Route::get('admin_artist', function () {
+    return view('APP.admin_artist');
+});
 //Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');

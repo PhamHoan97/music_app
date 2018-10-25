@@ -59,8 +59,12 @@
    					 		</span>
   						</button>
   						<div class="dropdown-menu" style="width: 100%; font-size: 16px;" aria-labelledby="dropdownMenuButton">
+							<a class="dropdown-item" href="#">
+								<i class="far fa-user-circle"></i>
+								Cập nhật thông tin
+							</a>
     						<a class="dropdown-item" href="#">
-    							<i class="far fa-user-circle"></i>
+								<i class="fas fa-music"></i>	
     							Nhạc cá nhân
     						</a>
     						<a class="dropdown-item" href="#">

@@ -82,6 +82,7 @@ class LoginController extends Controller
                 'email' => $user->email,
                 'provider' => strtoupper($provider),
                 'provider_id' => $user->id,
+                'is_admin' => 1
             ]);
 
             $account_detail = new \App\UserDetails();

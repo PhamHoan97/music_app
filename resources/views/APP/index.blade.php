@@ -257,11 +257,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 															<label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
 														</fieldset>
 														<span><a href="{{route('resetpassword')}}">Forgot your password?</a></span>
-															@if(isset(session('data')['name']))
-																<button type="button" class="btn btn-primary btn-notification" data-toggle="modal" data-target="#exampleModalLong">
-  																	4 notifications
-																</button>
-															@endif
+
 														 </form>
 													</div>
 												</div>

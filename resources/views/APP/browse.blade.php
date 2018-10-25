@@ -362,7 +362,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				    </div>
 				    <div class="browse">
 								<div class="tittle-head two">
-									<h3 class="tittle">CA SI <span class="new">New</span></h3>
+									<h3 class="tittle">Singer <span class="new">New</span></h3>
 									<a href="{!! url('browse') !!}">
 										<h4 class="tittle third">See all</h4>
 									</a>
@@ -469,7 +469,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				    </div>
 				    <div class="browse">
 								<div class="tittle-head two">
-									<h3 class="tittle">NHAC SI <span class="new">New</span></h3>
+									<h3 class="tittle">Artist <span class="new">New</span></h3>
 									<a href="{!! url('browse') !!}">
 										<h4 class="tittle third">See all</h4>
 									</a>
@@ -571,7 +571,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								 <ul id="flexiselDemo1">
 								<li>
 									<a href="{!! url('single') !!}"><img src="{!! asset('images/v1.jpg') !!}" alt=""/></a>
-									<div class="slide-title"><h4>Adele21 </div>
+									<div class="slide-title"><h4>Adele21 </h4></div>
 									<div class="date-city">
 										<h5>Jan-02-16</h5>
 										<div class="buy-tickets">

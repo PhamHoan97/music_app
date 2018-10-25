@@ -32,6 +32,7 @@
     28 => 'App\\Providers\\EventServiceProvider',
     29 => 'App\\Providers\\RouteServiceProvider',
     30 => 'Laravel\\Socialite\\SocialiteServiceProvider',
+    31 => 'Unisharp\\Ckeditor\\ServiceProvider',
   ),
   'eager' => 
   array (
@@ -51,6 +52,7 @@
     13 => 'App\\Providers\\AuthServiceProvider',
     14 => 'App\\Providers\\EventServiceProvider',
     15 => 'App\\Providers\\RouteServiceProvider',
+    16 => 'Unisharp\\Ckeditor\\ServiceProvider',
   ),
   'deferred' => 
   array (
