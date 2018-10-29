@@ -41,7 +41,9 @@
                 Xin chào :
                 </span>
                  <span class="text-info" style="font-weight: 700; font-family: Tahoma;">
-                    {{--{{session('data')['name']}}--}}Tran Huy
+                    @if(isset(session('data')['name']))
+                       {{session('data')['name']}}
+                    @endif
                 </span>
             </div>
             <div class="col-md-6"><p class="text-info title_header"></p></div>
@@ -69,7 +71,7 @@
                         </form>
                         <form action="" method="get" accept-charset="utf-8">
                             <button type="submit" class="btn btn-light dropdown-item">
-                            <i class="fas fa-sign-out-alt"></i><a class="text-dark" href=""> Logout</a>
+                            <i class="fas fa-sign-out-alt"></i><a class="text-dark" href="{{Route('logout')}}"> Logout</a>
                         </button>
                         </form>
                      </div>
@@ -85,8 +87,8 @@
             <div class="panel panel-default sidebar">
                 <div class="panel-heading"><i class="fas fa-home"></i><a class="title" href="">Home</a></div>
                 <div class="panel-body"><li><i class="fas fa-user-secret"></i><a href="" class="title">User </a></li></div>
-                <div class="panel-body"><li><i class="fas fa-envelope-open"></i><a href="" class="title">Singer</a></li></div>
-                <div class="panel-body"><li><i class="fas fa-envelope-open"></i><a href="" class="title">Artist</a></li></div>
+                <div class="panel-body"><li><i class="fas fa-envelope-open"></i><a href="{{Route('redirectSinger')}}" class="title">Singer</a></li></div>
+                <div class="panel-body"><li><i class="fas fa-envelope-open"></i><a href="{{Route('redirectArtist')}}" class="title">Artist</a></li></div>
                 {{--<div class="panel-body">--}}
                     {{--<ul class="navbar-nav advance">--}}
                         {{--<li class="nav-item dropdown">--}}
@@ -103,11 +105,8 @@
     <!-- extends -->
         <div class="col-md-9">
             <div class="status">
-                @if(session('alert'))
-            <span class="alert alert-success form-control" style="text-align:center;">{!! session('alert') !!}</span>
-                @endif
-                @if(isset($alert))
-            <span class="alert alert-success form-control" style="text-align:center;">{!! $alert !!}</span>
+                @if(session('status'))
+                    <span class="alert alert-success form-control" style="text-align:center;">{!! session('status') !!}</span>
                 @endif
             </div>
                 @yield('rightcontent')

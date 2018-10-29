@@ -11,38 +11,9 @@
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-
 Route::get('/', function () {
-//    session()->forget('data');
-
     return view('APP.index');
 });
-
-
-// Route::get('profile1', function () {
-//     return view('APP.profile1');
-// });
-
-// Route::get('browse', function () {
-//     return view('APP.browse');
-// });
-
-// Route::get('showAllSong1', function () {
-//     return view('APP.showAllSong1');
-// });
-
-// Route::get('showAllAlbum1', function () {
-//     return view('APP.showAllAlbum1');
-// });
-
-// Route::get('notifications1', function () {
-//     return view('APP.notifications1');
-// });
-
-//
 
 Route::get('profile', function () {
     return view('APP.profile');
@@ -73,21 +44,6 @@ Route::get('browse', function () {
     return view('APP.browse');
 });
 
-Route::get('admin', function () {
-    return view('APP.admin');
-});
-
-Route::get('admin_singer', function () {
-    return view('APP.admin_singer');
-});
-
-Route::get('admin_artist', function () {
-    return view('APP.admin_artist');
-});
-//Auth::routes();
-
-//Route::get('/home', 'HomeController@index')->name('home');
-
 Route::post('loginnormal','App\LoginController@LoginNormal')->name('loginnormal');
 
 Route::get('login/{provider}', 'App\LoginController@redirectToProvider');
@@ -100,5 +56,18 @@ Route::get('logout','App\LoginController@logout')->name('logout');
 
 Route::get('reset','App\SendEmail@redirectSendEmail')->name('resetpassword');
 
+// @route of admin 
+
+Route::get('admin', function () {
+    return view('ADMIN.admin');
+});
+
+Route::get('admin/singer','Admin\SingerAndArtist@redirectSinger')->name('redirectSinger');
+
+Route::get('admin/artist','Admin\SingerAndArtist@redirectArtist')->name('redirectArtist');
+
+Route::post('admin/addsinger','Admin\SingerAndArtist@excuteAddSinger')->name('addsinger')->middleware('checkaddsinger');
+
+Route::post('admin/addartist','Admin\SingerAndArtist@excuteAddArtist')->name('addartist')->middleware('checkaddartist');
 
 

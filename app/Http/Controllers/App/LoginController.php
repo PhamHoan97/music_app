@@ -39,7 +39,11 @@ class LoginController extends Controller
             $id = $user->id;
             session()->put('data',['id' => $id,'name' => $name]);
             Auth::Login($user,true);
-            return redirect($this->redirectTo)->with('status','Đăng nhập thành công !!');
+            if($user->is_admin == 1){
+                return redirect($this->redirectTo)->with('status','Đăng nhập thành công !!');          
+            }else{
+                return redirect('admin')->with('status','Đăng nhập thành công !!'); 
+            }
         }else{
             return redirect($this->redirectTo)->with('notice','Tài khoản này không tồn tại !!');
         }

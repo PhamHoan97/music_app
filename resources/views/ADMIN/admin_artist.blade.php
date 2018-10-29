@@ -6,7 +6,7 @@
     </div>
     <div class="row">
         <div>
-            <form class="form-horizontal" action="" method="post">
+            <form class="form-horizontal" action="{{Route('addartist')}}" method="post" enctype="multipart/form-data">
                 {!! csrf_field() !!}
                 <div class="form-group">
                     <div class="row">
@@ -26,7 +26,7 @@
                         <div class="col-md-1"></div>
                         <label class="control-label col-md-2 text-info" for="ds">Birthday <span class="text-danger">(*)</span>:</label>
                         <div class="col-md-6">
-                            <input type="date" class="form-control" id="date" name="dates">
+                            <input type="date" class="form-control" id="date" name="date">
                             @if(session()->has('date'))
                                 <span class="text-danger">{!! session('date')!!}</span>
                             @endif
@@ -40,7 +40,7 @@
                         <label class="control-label col-md-2 text-info" for="phone">Phone <span class="text-danger">(*)</span>:</label>
                         <div class="col-md-6">
                             <input type="text" class="form-control" id="phone" name="phone">
-                            @if(session()->has('name'))
+                            @if(session()->has('phone'))
                                 <span class="text-danger">{!! session('phone')!!}</span>
                             @endif
                         </div>
@@ -104,6 +104,7 @@
             <thead>
             <tr>
                 <th class="text-info">ID </th>
+                <th class="text-info">Avatar </th>
                 <th class="text-info">Name </th>
                 <th class="text-info">Birthday </th>
                 <th class="text-info">Phone </th>
@@ -115,12 +116,15 @@
                 @foreach($artists as $artist)
                     <tr>
                         <td>{{$artist->id}}</td>
+                        <td><img src='{!! asset($artist->avatar_path) !!}' class="avatar" style="
+                        width: 50px; height: 50px;"></td>
                         <td>{{$artist->name}}</td>
                         <td>{{$artist->birth}}</td>
-                        <td>{{$artist->phone}}</td>
+                        <td>{{$artist->phonenumber}}</td>
                         <td>
-                            <a href="" class="btn btn-secondary">Delete <i class="fas fa-trash"></i></a>
-                            <a href="" class="btn btn-warning">Song <i class="fas fa-music"></i></a>
+                            <a href="" class="btn btn-warning">Edit <i class="fas fa-edit"></i></a>  
+                            <a href="" class="btn btn-secondary">Song <i class="fas fa-music"></i></a>
+                            <a href="" class="btn btn-danger">Delete <i class="fas fa-trash"></i>                            
                         </td>
                     </tr>
                 @endforeach
