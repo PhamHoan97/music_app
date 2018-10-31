@@ -20,6 +20,7 @@
 	<link rel="stylesheet" type="text/css" href="{!! asset('css/profile.css')!!}">
 	<script src="{!! asset('js/profile.js')!!}"></script>
 	<script src="{!! asset('js/owl.carousel.min.js')!!}"></script>
+	<script src="{!! asset('/vendor/unisharp/laravel-ckeditor/ckeditor.js')!!}" type="text/javascript" language="javascript"></script>
 
 	<script  type="text/javascript" charset="utf-8" async defer>
 		$(document).ready(function () {
@@ -365,7 +366,7 @@
 					url: "{!! url('searchsinger') !!}",
 					data: {'singer': $value},
 					success:function(data){
-						$('#ca--si-goi-y').html(data);
+						$("#ca_si_goi_y_id").html(data);
 					}
 				});
 			});
@@ -379,7 +380,7 @@
 					url: "{!! url('searchartist') !!}",
 					data: {'artist': $value},
 					success:function(data){
-						$('#nhac--si-goi-y').html(data);
+						$("#nhac_si_goi_y_id").html(data);
 					}
 				});
 			});
@@ -417,16 +418,15 @@
     			<div class="ca--si--chon" style="margin-top: 5px;">
     				<button type="button" class="btn btn-outline-secondary xoa--all"><i class="far fa-trash-alt"></i></button>
     				<span class="list--chon">
-						<span class=" choosed choosed1" value="1">Justatee</span>
+						<!-- <span class=" choosed choosed1" value="1">Justatee</span> -->
 					</span>
     			</div>
-    			<div id="ca--si-goi-y" class="ca--si-goi-y" style="margin-top: 5px;">
+    			<div id="ca_si_goi_y_id" class="ca--si-goi-y" style="margin-top: 5px;">
 <!--     				<button type="button" class="cs--goi_y btn btn-outline-primary" value="1">Tuấn hưng</button>
     				<button type="button" class= "cs--goi_y btn btn-outline-primary" value="2">Hồ Ngọc Hà</button>
     				<button type="button" class= "cs--goi_y btn btn-outline-primary" value="3">Khói</button>
     				<button type="button" class= "cs--goi_y btn btn-outline-primary" value="4">DSK</button>
-    				<button type="button" class= "cs--goi_y btn btn-outline-primary" value="5">Binz</button>
-    				 -->
+    				<button type="button" class= "cs--goi_y btn btn-outline-primary" value="5">Binz</button> -->
     			</div>
     			
   			</div>
@@ -437,10 +437,10 @@
     			<div class="nhac--si--chon" style="margin-top: 5px;">
     				<button type="button" class="btn btn-outline-secondary xoa--all--nhac--si"><i class="far fa-trash-alt"></i></button>
     				<span class="list--nhac--si--chon">
-						<span class=" choosed choosed1" value="1">Justatee</span>
+						<!-- <span class=" choosed choosed1" value="1">Justatee</span> -->
 					</span>
     			</div>
-    			<div id="nhac--si-goi-y" class="ca--si-goi-y" style="margin-top: 5px;">
+    			<div id="nhac_si_goi_y_id" class="ca--si-goi-y" style="margin-top: 5px;">
   <!--   				<button type="button" class="ns--goi_y btn btn-outline-primary" value="1">Tuấn hưng</button>
     				<button type="button" class= "ns--goi_y btn btn-outline-primary" value="2">Hồ Ngọc Hà</button>
     				<button type="button" class= "ns--goi_y btn btn-outline-primary" value="3">Khói</button>
@@ -470,7 +470,7 @@
   			</div>
   			<div class="form-group">
     			<label > <i class="fab fa-adversal"></i>  Your Lyric</label>
-    			<textarea class="form-control upload__lyrics" id="exampleFormControlTextarea1" rows="3"></textarea>
+    			<textarea class="form-control upload__lyrics ckeditor" id="exampleFormControlTextarea1" rows="3"></textarea>
   			</div>
 		</form>
       </div>

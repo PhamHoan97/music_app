@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function() { 
 	// lấy src gốc để phòng trường hợp hủy
 	var src_cover = $('.banner--cover').attr('src');
 	

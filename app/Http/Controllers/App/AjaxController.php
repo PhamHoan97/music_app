@@ -4,7 +4,7 @@ namespace App\Http\Controllers\App;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use DB;
+use DB; 
 
 class AjaxController extends Controller
 {
@@ -16,7 +16,8 @@ class AjaxController extends Controller
     		if($singers != null){
     			foreach ($singers as $singer) {
     				$id_singer = $singer->id;
-    				$output.= "<button type='button' class='cs--goi_y btn btn-outline-primary' value='".$id_singer."'>".$singer->name."</button>";   				
+    				$output.= " <button type='button' class='cs--goi_y btn btn-outline-primary' 
+                    value='".$id_singer."'>".$singer->name."</button> ";   				
 
     			}
     			return Response($output);
@@ -32,7 +33,7 @@ class AjaxController extends Controller
     		if($artists != null){
     			foreach ($artists as $artist) {
     				$id_artist = $artist->id;
-    				$output.= "<button type='button' class='cs--goi_y btn btn-outline-primary' value='".$id_artist."'>".$artist->name."</button>";
+    				$output.= " <button type='button' class='ns--goi_y btn btn-outline-primary' value='".$id_artist."'>".$artist->name."</button> ";
     			}
     			return Response($output);
     		}
