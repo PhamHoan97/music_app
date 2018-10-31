@@ -59,6 +59,7 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'checkaddsinger' => \App\Http\Middleware\Checkaddsinger::class,
         'checkaddartist' => \App\Http\Middleware\Checkaddartist::class,
+        'checkuploadsong' => \App\Http\Middleware\Checkuploadsong::class,
 
     ];
 }

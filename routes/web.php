@@ -21,7 +21,7 @@ Route::get('profile', function () {
 
 Route::get('song', function () {
     return view('APP.song');
-});
+})->name('song');
 
 Route::get('sub', function () {
     return view('APP.sub');
@@ -75,3 +75,5 @@ Route::get('admin/user','Admin\SingerAndArtist@redirectUser')->name('redirectUse
 Route::get('searchsinger','App\AjaxController@searchSingerAjax')->name('searchsinger');
 
 Route::get('searchartist','App\AjaxController@searchArtistAjax')->name('searchartist');
+
+Route::post('uploadsong','App\SongController@excuteUploadSong')->name('uploadSong')->middleware('checkuploadsong');

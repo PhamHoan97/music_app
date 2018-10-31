@@ -200,6 +200,16 @@
 	<!-- option -->
 	<div class="bai--hat ">
 		<div class="container">
+			<div class="status">
+                @if(session('status'))
+                    <span class="alert alert-danger form-control" style="text-align:center;">{!! session('status') !!}</span>
+                @endif
+
+                @if(isset($status))
+                    <span class="alert alert-success form-control" style="text-align:center;">{!! $status !!}</span>
+                @endif
+            </div>
+
 			<div class="row">
 				<div class="col-12">
 					<h1>Bài hát 
@@ -359,7 +369,7 @@
 
 	<script type="text/javascript">
 		$(document).ready(function(){	
-			$('#singer').on('keyup',function(){
+			$('#newsinger').on('keyup',function(){
 				$value = $(this).val();
 				$.ajax({
 					type: 'get',
@@ -367,13 +377,61 @@
 					data: {'singer': $value},
 					success:function(data){
 						$("#ca_si_goi_y_id").html(data);
+						    // thêm 1 ca sĩ mới
+					    $('.cs--goi_y').click(function(event) {
+
+					        var value = $(this).attr('value');
+					        var name  = $(this).text();
+					        var classValue = "choosed choosed1"+value;
+					       
+					        
+					        var newSinger = {
+					            id: value,
+					            class: classValue,
+					            value: value
+					        };
+
+					        var $span = $("<span>", newSinger);
+					          $span.html(name);
+
+					        var list_singer = document.getElementById('list_singer').value;
+
+					        if(list_singer == 0){
+					        	document.getElementById('list_singer').value = value;
+					        	$(".list--chon").append($span);
+					        	console.log("Oke");
+					        }else{
+					        	//Kiểm tra ca sĩ trùng
+					        	if(checkSingerExist(list_singer,value)){
+									console.log("Trung cmnr");
+					   			}else{
+					   				var newvalue = list_singer + ',' + value;
+					        		document.getElementById('list_singer').value = newvalue;
+					        		$(".list--chon").append($span);
+					        		console.log("Oke");
+					   			}
+					        }
+
+					    });
+
+					    function checkSingerExist(list_singer,value){
+					    	if(list_singer != 0){
+					    		var array_listsinger = list_singer.split(",");
+								for (var i = 0; i < array_listsinger.length; i++) {
+								      	if(value == array_listsinger[i]){
+								      		return true;
+								      	}
+								    }
+					    	}
+					    	return false;
+					    }
 					}
 				});
 			});
 		});
 
 		$(document).ready(function(){	
-			$('#artist').on('keyup',function(){
+			$('#newartist').on('keyup',function(){
 				$value = $(this).val();
 				$.ajax({
 					type: 'get',
@@ -381,6 +439,55 @@
 					data: {'artist': $value},
 					success:function(data){
 						$("#nhac_si_goi_y_id").html(data);
+
+						// thêm 1 nhac sĩ mới
+					    $('.ns--goi_y').click(function(event) {
+					        var value = $(this).attr('value');
+					        var name  = $(this).text();
+					        var classValue = "choosed choosed1"+value;
+					        
+					        
+					        var newAuthor = {
+					            id: value,
+					            class: classValue,
+					            value: value
+					        };
+
+					        var $span = $("<span>", newAuthor);
+					          $span.html(name);
+
+					        var list_artist = document.getElementById('list_artist').value;
+
+					        if(list_artist == 0){
+					        	document.getElementById('list_artist').value = value;
+					        	$(".list--nhac--si--chon").append($span);
+					        	console.log("Oke");
+					        }else{
+					        	//Kiểm tra nhac sĩ trùng
+					        	if(checkArtistExist(list_artist,value)){
+									console.log("Trung cmnr");
+					   			}else{
+					   				var newvalue = list_artist + ',' + value;
+					        		document.getElementById('list_artist').value = newvalue;
+					        		$(".list--nhac--si--chon").append($span);
+					        		console.log("Oke");
+					   			}
+					        }
+							  
+					    });
+
+					    function checkArtistExist(list_artist,value){
+					    	if(list_artist != 0){
+					    		var array_listartist = list_artist.split(",");
+								for (var i = 0; i < array_listartist.length; i++) {
+								      	if(value == array_listartist[i]){
+								      		return true;
+								      	}
+								    }
+					    	}
+					    	return false;
+					    }
+
 					}
 				});
 			});
@@ -396,24 +503,37 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+      <form action="{{Route('uploadSong')}}" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+      {!! csrf_field() !!}
       <div class="modal-body">
-        <form action="" method="post" accept-charset="utf-8" enctype="multipart/form-data">
-        	{!! csrf_field() !!}
+<!--         <form action="" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+        	{!! csrf_field() !!} -->
         	<div class="form-group upload--input ">
     			<label > <i class="fas fa-cloud-upload-alt"></i> 
     				<span class="upload--input__name"> Select file to upload </span>
+    				
+				<input type="file" class="upload_input" id="song" name="song">
+    			</label>
+    			
+  			</div>
+  			<div class="form-group">
+    			<label > <i class="fas fa-headset"></i> Name <span class="text-danger">(*)</span></label>
+    			<input type="text" class="form-control upload__name" name="name_song" id="name_song">
+  			</div>
+
+  			<div class="form-group upload--input ">
+    			<label > <i class="fas fa-cloud-upload-alt"></i> 
+    				<span class="upload--input__name"> Select image of song </span>
     				
 				<input type="file" class="upload_input" id="image" name="image">
     			</label>
     			
   			</div>
+
   			<div class="form-group">
-    			<label > <i class="fas fa-headset"></i> Name</label>
-    			<input type="text" class="form-control upload__name" name="name">
-  			</div>
-  			<div class="form-group">
-    			<label ><i class="fas fa-user-check"></i> Singer</label>
-    			<input type="text" class="form-control upload__singer" id="singer" name="singer">
+    			<label ><i class="fas fa-user-check"></i> Singer <span class="text-danger">(*)</span></label>
+    			<input type="text" class="form-control upload__singer" id="newsinger" name="newsinger">
+    			<input type="hidden" class="form-control upload__singer" id="list_singer" name="list_singer" value="0">
     			<!-- Hoàn Note -- đây là chỗ khi m select ra những ca sĩ gợi ý nha -->
     			<div class="ca--si--chon" style="margin-top: 5px;">
     				<button type="button" class="btn btn-outline-secondary xoa--all"><i class="far fa-trash-alt"></i></button>
@@ -422,18 +542,14 @@
 					</span>
     			</div>
     			<div id="ca_si_goi_y_id" class="ca--si-goi-y" style="margin-top: 5px;">
-<!--     				<button type="button" class="cs--goi_y btn btn-outline-primary" value="1">Tuấn hưng</button>
-    				<button type="button" class= "cs--goi_y btn btn-outline-primary" value="2">Hồ Ngọc Hà</button>
-    				<button type="button" class= "cs--goi_y btn btn-outline-primary" value="3">Khói</button>
-    				<button type="button" class= "cs--goi_y btn btn-outline-primary" value="4">DSK</button>
-    				<button type="button" class= "cs--goi_y btn btn-outline-primary" value="5">Binz</button> -->
+<!--     				<button type="button" class="cs--goi_y btn btn-outline-primary" value="1">Tuấn hưng</button> -->
     			</div>
     			
   			</div>
   			<div class="form-group">
-    			<label > <i class="fas fa-award"></i> Author</label>
-    			<input type="text" class="form-control upload__author" id="artist" name="artist">
-
+    			<label > <i class="fas fa-award"></i> Author <span class="text-danger">(*)</span></label>
+    			<input type="text" class="form-control upload__author" id="newartist" name="newartist">
+				<input type="hidden" class="form-control upload__author" id="list_artist" name="list_artist" value="0">
     			<div class="nhac--si--chon" style="margin-top: 5px;">
     				<button type="button" class="btn btn-outline-secondary xoa--all--nhac--si"><i class="far fa-trash-alt"></i></button>
     				<span class="list--nhac--si--chon">
@@ -441,25 +557,21 @@
 					</span>
     			</div>
     			<div id="nhac_si_goi_y_id" class="ca--si-goi-y" style="margin-top: 5px;">
-  <!--   				<button type="button" class="ns--goi_y btn btn-outline-primary" value="1">Tuấn hưng</button>
-    				<button type="button" class= "ns--goi_y btn btn-outline-primary" value="2">Hồ Ngọc Hà</button>
-    				<button type="button" class= "ns--goi_y btn btn-outline-primary" value="3">Khói</button>
-    				<button type="button" class= "ns--goi_y btn btn-outline-primary" value="4">DSK</button>
-    				<button type="button" class= "ns--goi_y btn btn-outline-primary" value="5">Binz</button> -->
-    				
+<!--     				<button type="button" class="ns--goi_y btn btn-outline-primary" value="1">Tuấn hưng</button> -->
     			</div>
   			</div>
   			<div class="form-group">
-    			<label > <i class="fas fa-keyboard"></i> The kind</label>
-    			<input type="text" class="form-control upload__author">
+    			<label > <i class="fas fa-keyboard"></i> The Style <span class="text-danger">(*)</span></label>
+    			<input type="text" class="form-control upload__author" id="style" name="style">
 
     			<div class="nhac--si--chon" style="margin-top: 5px;">
     				<button type="button" class="btn btn-outline-secondary xoa--all--the--loai"><i class="far fa-trash-alt"></i></button>
     				<span class="the-loai-duoc-chon">
-						<span class=" choosed choosed1" value="1">Rap việt</span>
+<!-- 						<span class=" choosed choosed1" value="1">Rap việt</span> -->
 					</span>
     			</div>
     			<div class="the-loai-goi-y" style="margin-top: 5px;">
+    				<input type="hidden" class="form-control upload__author" id="list_style" name="list_style" value="0">
     				<button type="button" class="tl--goi_y btn btn-outline-primary" value="1">Trữ tình</button>
     				<button type="button" class= "tl--goi_y btn btn-outline-primary" value="2">EDM</button>
     				<button type="button" class= "tl--goi_y btn btn-outline-primary" value="3">Quan họ</button>
@@ -468,16 +580,23 @@
     				
     			</div>
   			</div>
+
+  			<div class="form-group">
+    			<label > <i class="fab fa-adversal"></i>  Description</label>
+    			<textarea class="form-control upload__lyrics ckeditor" id="exampleFormControlTextarea1" name="description" rows="3"></textarea>
+  			</div>
+
   			<div class="form-group">
     			<label > <i class="fab fa-adversal"></i>  Your Lyric</label>
-    			<textarea class="form-control upload__lyrics ckeditor" id="exampleFormControlTextarea1" rows="3"></textarea>
+    			<textarea class="form-control upload__lyrics ckeditor" id="exampleFormControlTextarea1" name="lyric" rows="3"></textarea>
   			</div>
-		</form>
+		<!-- </form> -->
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button type="submit" class="btn btn-primary">Upload</button>
       </div>
+  	</form>
     </div>
   </div>
 </div>

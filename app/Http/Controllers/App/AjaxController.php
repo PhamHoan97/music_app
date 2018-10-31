@@ -18,7 +18,6 @@ class AjaxController extends Controller
     				$id_singer = $singer->id;
     				$output.= " <button type='button' class='cs--goi_y btn btn-outline-primary' 
                     value='".$id_singer."'>".$singer->name."</button> ";   				
-
     			}
     			return Response($output);
     		}

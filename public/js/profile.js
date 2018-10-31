@@ -38,56 +38,59 @@ $(document).ready(function() {
     });
     // xóa sạch ca sĩ được chọn
      $('.xoa--all').click(function(event) {
-       $('.list--chon').html('');
+        $('#list_singer').val('');
+        $('.list--chon').html('');
     });
 
     // thêm 1 ca sĩ mới
-    $('.cs--goi_y').click(function(event) {
-        var value = $(this).attr('value');
-        var name  = $(this).text();
-        var classValue = "choosed choosed1"+value;
+    // $('.cs--goi_y').click(function(event) {
+    //     var value = $(this).attr('value');
+    //     var name  = $(this).text();
+    //     var classValue = "choosed choosed1"+value;
        
         
-        var newSinger = {
-            id: value,
-            class: classValue,
-            value: value
-        };
+    //     var newSinger = {
+    //         id: value,
+    //         class: classValue,
+    //         value: value
+    //     };
 
-        var $span = $("<span>", newSinger);
-          $span.html(name);
-          $(".list--chon").append($span);
-    });
+    //     var $span = $("<span>", newSinger);
+    //       $span.html(name);
+    //       $(".list--chon").append($span);
+    // });
     
     // xóa sạch nhac sĩ được chọn
      $('.xoa--all--nhac--si').click(function(event) {
-       $('.list--nhac--si--chon').html('');
+        $('#list_artist').val('');
+        $('.list--nhac--si--chon').html('');
     });
 
-    // thêm 1 ca sĩ mới
-    $('.ns--goi_y').click(function(event) {
-        var value = $(this).attr('value');
-        var name  = $(this).text();
-        var classValue = "choosed choosed1"+value;
+    // thêm 1 nhac sĩ mới
+    // $('.ns--goi_y').click(function(event) {
+    //     var value = $(this).attr('value');
+    //     var name  = $(this).text();
+    //     var classValue = "choosed choosed1"+value;
         
         
-        var newAuthor = {
-            id: value,
-            class: classValue,
-            value: value
-        };
+    //     var newAuthor = {
+    //         id: value,
+    //         class: classValue,
+    //         value: value
+    //     };
 
-        var $span = $("<span>", newAuthor);
-          $span.html(name);
-          $(".list--nhac--si--chon").append($span);
-    });
+    //     var $span = $("<span>", newAuthor);
+    //       $span.html(name);
+    //       $(".list--nhac--si--chon").append($span);
+    // });
 
     // xóa sạch the loai được chọn
      $('.xoa--all--the--loai').click(function(event) {
-       $('.the-loai-duoc-chon').html('');
+        $('#list_style').val('');
+        $('.the-loai-duoc-chon').html('');
     });
 
-    // thêm 1 ca sĩ mới
+    // thêm 1 tl sĩ mới
     $('.tl--goi_y').click(function(event) {
         var value = $(this).attr('value');
         var name  = $(this).text();
@@ -102,6 +105,36 @@ $(document).ready(function() {
 
         var $span = $("<span>", newAuthor);
           $span.html(name);
-          $(".the-loai-duoc-chon").append($span);
+
+        var list_style = document.getElementById('list_style').value;
+
+        if(list_style == 0){
+            document.getElementById('list_style').value = value;
+            $(".the-loai-duoc-chon").append($span);
+            console.log("Oke");
+        }else{
+            //Kiểm tra tl sĩ trùng
+            if(checkStyleExist(list_style,value)){
+                console.log("Trung cmnr");
+            }else{
+                var newvalue = list_style + ',' + value;
+                document.getElementById('list_style').value = newvalue;
+                $(".the-loai-duoc-chon").append($span);
+                console.log("Oke");
+            }
+        }        
+
     });
+
+    function checkStyleExist(list_style,value){
+        if(list_style != 0){
+            var array_liststyle = list_style.split(",");
+            for (var i = 0; i < array_liststyle.length; i++) {
+                    if(value == array_liststyle[i]){
+                        return true;
+                    }
+                }
+        }
+        return false;
+    }
 });
