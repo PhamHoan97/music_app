@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" ></script>
 
 	<!-- Font Awesome -->
@@ -355,6 +356,36 @@
 		</div>
 	</div>	
 
+	<script type="text/javascript">
+		$(document).ready(function(){	
+			$('#singer').on('keyup',function(){
+				$value = $(this).val();
+				$.ajax({
+					type: 'get',
+					url: "{!! url('searchsinger') !!}",
+					data: {'singer': $value},
+					success:function(data){
+						$('#ca--si-goi-y').html(data);
+					}
+				});
+			});
+		});
+
+		$(document).ready(function(){	
+			$('#artist').on('keyup',function(){
+				$value = $(this).val();
+				$.ajax({
+					type: 'get',
+					url: "{!! url('searchartist') !!}",
+					data: {'artist': $value},
+					success:function(data){
+						$('#nhac--si-goi-y').html(data);
+					}
+				});
+			});
+		});
+	</script>
+
 <div class="modal fade" id="upload__Song" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -365,22 +396,23 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <form action="" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+        	{!! csrf_field() !!}
         	<div class="form-group upload--input ">
     			<label > <i class="fas fa-cloud-upload-alt"></i> 
     				<span class="upload--input__name"> Select file to upload </span>
     				
-				<input type="file" class="upload_input" id="">
+				<input type="file" class="upload_input" id="image" name="image">
     			</label>
     			
   			</div>
   			<div class="form-group">
     			<label > <i class="fas fa-headset"></i> Name</label>
-    			<input type="text" class="form-control upload__name">
+    			<input type="text" class="form-control upload__name" name="name">
   			</div>
   			<div class="form-group">
     			<label ><i class="fas fa-user-check"></i> Singer</label>
-    			<input type="text" class="form-control upload__singer">
+    			<input type="text" class="form-control upload__singer" id="singer" name="singer">
     			<!-- Hoàn Note -- đây là chỗ khi m select ra những ca sĩ gợi ý nha -->
     			<div class="ca--si--chon" style="margin-top: 5px;">
     				<button type="button" class="btn btn-outline-secondary xoa--all"><i class="far fa-trash-alt"></i></button>
@@ -388,19 +420,19 @@
 						<span class=" choosed choosed1" value="1">Justatee</span>
 					</span>
     			</div>
-    			<div class="ca--si-goi-y" style="margin-top: 5px;">
-    				<button type="button" class="cs--goi_y btn btn-outline-primary" value="1">Tuấn hưng</button>
+    			<div id="ca--si-goi-y" class="ca--si-goi-y" style="margin-top: 5px;">
+<!--     				<button type="button" class="cs--goi_y btn btn-outline-primary" value="1">Tuấn hưng</button>
     				<button type="button" class= "cs--goi_y btn btn-outline-primary" value="2">Hồ Ngọc Hà</button>
     				<button type="button" class= "cs--goi_y btn btn-outline-primary" value="3">Khói</button>
     				<button type="button" class= "cs--goi_y btn btn-outline-primary" value="4">DSK</button>
     				<button type="button" class= "cs--goi_y btn btn-outline-primary" value="5">Binz</button>
-    				
+    				 -->
     			</div>
     			
   			</div>
   			<div class="form-group">
     			<label > <i class="fas fa-award"></i> Author</label>
-    			<input type="text" class="form-control upload__author">
+    			<input type="text" class="form-control upload__author" id="artist" name="artist">
 
     			<div class="nhac--si--chon" style="margin-top: 5px;">
     				<button type="button" class="btn btn-outline-secondary xoa--all--nhac--si"><i class="far fa-trash-alt"></i></button>
@@ -408,12 +440,12 @@
 						<span class=" choosed choosed1" value="1">Justatee</span>
 					</span>
     			</div>
-    			<div class="ca--si-goi-y" style="margin-top: 5px;">
-    				<button type="button" class="ns--goi_y btn btn-outline-primary" value="1">Tuấn hưng</button>
+    			<div id="nhac--si-goi-y" class="ca--si-goi-y" style="margin-top: 5px;">
+  <!--   				<button type="button" class="ns--goi_y btn btn-outline-primary" value="1">Tuấn hưng</button>
     				<button type="button" class= "ns--goi_y btn btn-outline-primary" value="2">Hồ Ngọc Hà</button>
     				<button type="button" class= "ns--goi_y btn btn-outline-primary" value="3">Khói</button>
     				<button type="button" class= "ns--goi_y btn btn-outline-primary" value="4">DSK</button>
-    				<button type="button" class= "ns--goi_y btn btn-outline-primary" value="5">Binz</button>
+    				<button type="button" class= "ns--goi_y btn btn-outline-primary" value="5">Binz</button> -->
     				
     			</div>
   			</div>

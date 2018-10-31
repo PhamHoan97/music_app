@@ -103,4 +103,18 @@ class SingerAndArtist extends Controller
         return redirect()->Route('redirectArtist')->with('status','Thêm nhạc sĩ thành công!!');
     }
 
+    public function redirectUser(){
+
+        $values = array();
+        $users = DB::table('tbl_accounts')->where('is_admin',1)->paginate(8);
+
+        foreach ($users as $key => $user) {
+                $id = $user->id;
+                $detail = DB::table('tbl_account_details')->where('id_account',$id)->first();
+                if($detail){
+                    $values[] = [$id => ['detail' => $detail]];
+                }
+            }    
+        return view('ADMIN.admin_user',array('users' => $users, 'values' => $values));
+    }
 }

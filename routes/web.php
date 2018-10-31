@@ -70,4 +70,8 @@ Route::post('admin/addsinger','Admin\SingerAndArtist@excuteAddSinger')->name('ad
 
 Route::post('admin/addartist','Admin\SingerAndArtist@excuteAddArtist')->name('addartist')->middleware('checkaddartist');
 
+Route::get('admin/user','Admin\SingerAndArtist@redirectUser')->name('redirectUser');
 
+Route::get('searchsinger','App\AjaxController@searchSingerAjax')->name('searchsinger');
+
+Route::get('searchartist','App\AjaxController@searchArtistAjax')->name('searchartist');

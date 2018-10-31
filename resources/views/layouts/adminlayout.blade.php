@@ -86,7 +86,7 @@
         <div class="col-md-3 panel">
             <div class="panel panel-default sidebar">
                 <div class="panel-heading"><i class="fas fa-home"></i><a class="title" href="">Home</a></div>
-                <div class="panel-body"><li><i class="fas fa-user-secret"></i><a href="" class="title">User </a></li></div>
+                <div class="panel-body"><li><i class="fas fa-user-secret"></i><a href="{{Route('redirectUser')}}" class="title">User </a></li></div>
                 <div class="panel-body"><li><i class="fas fa-envelope-open"></i><a href="{{Route('redirectSinger')}}" class="title">Singer</a></li></div>
                 <div class="panel-body"><li><i class="fas fa-envelope-open"></i><a href="{{Route('redirectArtist')}}" class="title">Artist</a></li></div>
                 {{--<div class="panel-body">--}}
