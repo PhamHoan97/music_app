@@ -15,7 +15,21 @@ class SongController extends Controller
         $list_singer = $request->list_singer;
         $list_artist = $request->list_artist;
         $list_style = $request->list_style;
-        $file = $request->file('song');
-        $file = $request->file('image');
+        $file_song = $request->file('song');
+        $file_image = $request->file('image');
+
+        Storage::cloud()->put($name, file_get_contents($file_song));
+
+        $dir = '/';
+        $recursive = false; // get inner folder
+        $contents = collect(Storage::cloud()->listContents($dir, $recursive));
+
+        $songGD = $contents->where('type', '=', 'file')
+            ->where('name','=', $name)
+            ->where('size','=', $size )
+//            ->where('timestamp')
+            ->first();
+
+
     }
 }

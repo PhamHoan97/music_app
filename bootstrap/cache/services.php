@@ -33,6 +33,7 @@
     29 => 'App\\Providers\\RouteServiceProvider',
     30 => 'Laravel\\Socialite\\SocialiteServiceProvider',
     31 => 'Unisharp\\Ckeditor\\ServiceProvider',
+    32 => 'App\\Providers\\GoogleDriveServiceProvider',
   ),
   'eager' => 
   array (
@@ -53,6 +54,7 @@
     14 => 'App\\Providers\\EventServiceProvider',
     15 => 'App\\Providers\\RouteServiceProvider',
     16 => 'Unisharp\\Ckeditor\\ServiceProvider',
+    17 => 'App\\Providers\\GoogleDriveServiceProvider',
   ),
   'deferred' => 
   array (
