@@ -16,6 +16,7 @@ class CreateTblSongs extends Migration
         Schema::create('tbl_songs', function (Blueprint $table) {
             $table->increments('id');
             $table->string('song_name');
+            $table->string('song_path');
             $table->string('song_image_path');
             $table->integer('view')->default(0);
             $table->integer('like')->default(0);

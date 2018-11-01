@@ -101,7 +101,7 @@ class SongController extends Controller
 			}
 		}		
 
-		return view('App.song',['status','Đăng nhạc thành công !!']);
+		return view('APP.song',['status','Đăng nhạc thành công !!']);
     }
 
         public function deleteFile(Request $request){
