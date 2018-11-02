@@ -22,7 +22,6 @@ class CreateTblSongs extends Migration
             $table->integer('like')->default(0);
             $table->datetime('post_time');
             $table->text('description')->nullable();
-            $table->text('lyrics')->nullable();
             $table->text('style');
             $table->rememberToken();
             $table->timestamps();

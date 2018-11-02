@@ -39,7 +39,7 @@ class Checkuploadsong
            return redirect()->route('song')->with('status','Bạn cần chọn nhạc sĩ viết bài hát này !!');     
         }
 
-        if($list_style == 0 ){
+        if(!isset($list_style)){
            return redirect()->route('song')->with('status','Bạn cần chọn thể loại của bài hát này !!');     
         }
 

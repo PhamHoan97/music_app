@@ -4,10 +4,12 @@ namespace App\Http\Controllers\App;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 use App\Song;
 use App\Show;
 use App\Write;
 use App\OwnSong;
+use DB;
 
 class SongController extends Controller
 {
@@ -19,7 +21,6 @@ class SongController extends Controller
         $list_singer = $request->list_singer;
         $list_artist = $request->list_artist;
         $list_style = $request->list_style;
-        $lyric = $request->lyric;
         $description = $request->description;
         $file_song = $request->file('song');
         $file_image = $request->file('image');
@@ -47,20 +48,44 @@ class SongController extends Controller
         //get image song path to insert
         $image_path = $imagesong_link.$imagesong_name.".".$imagesong_type;
 
-        //insert song
+        //get singer sing this song
+        $get_singer = null;
+        $list_singer = explode(",", $list_singer);
+        foreach ($list_singer as $id_singer) {
+                $singer = DB::table('tbl_singers')->where('id',$id_singer)->first();
+                $get_singer = $get_singer.$singer->name.' ';
+            }    
+        $put_singer_to_description = "<p class='class-info'>"."Ca sĩ thể hiện: ".$get_singer."</p>"."<br>";
+
+        //get artist write this song    
+        $get_artist = null;
+        $list_artist = explode(",", $list_artist);
+        foreach ($list_artist as $id_artist) {
+                $artist = DB::table('tbl_artists')->where('id',$id_artist)->first();
+                $get_artist = $get_artist.$artist->name.' ';
+            } 
+        $put_artist_to_description = "<p class='class-info'>"."Nhạc sĩ: ".$get_artist."</p>"."<br>";
+
+        //put singer and artist to description
+
+        $description = $put_singer_to_description.$put_artist_to_description.$description;
+
+        //get datetime
+        $post_time = date('Y-m-d H:i:s');
+     //insert song
         $song = new Song();
 
         $song->song_name = $name;
         $song->song_image_path = $image_path;
         $song->song_path = $song_path;
         $song->description = $description;
-        $song->lyric = $lyric;
-        $song->list_style = $song->list_style;
+        $song->style = $list_style;
+        $song->post_time = $post_time;
 
         $song->save();
 
         //get song upload 
-        $songupload = DB::table('rlt_own_songs')->where('song_name',$name)->where('path',$song_path)->first();
+        $songupload = DB::table('tbl_songs')->where('song_name',$name)->where('song_path',$song_path)->first();
 
         //insert Ownsong
         $OwnSong =  new OwnSong();
@@ -68,38 +93,7 @@ class SongController extends Controller
         $OwnSong->id_account = $id;
         $OwnSong->id_song = $songupload->id;
         $OwnSong->save();
-
-        //insert Show 
-		if($newsinger){
-			$show = new Show();
-			$show->detail = $newsinger;
-			$show->id_song = $songupload->id;
-			$show->save();
-		}else{
-			$singers = explode(',', $list_singer));
-			foreach ($singers as $singer) {
-				$show = new Show();
-				$show->id_song = $songupload->id;
-				$show->id_singer = $singer;
-				$show->save();
-			}
-		}
-
-        //insert write 
-		if($newartist){
-			$write = new Write();
-			$write->detail = $newartist;
-			$write->id_song = $songupload->id;
-			$write->save();
-		}else{
-			$artists = explode(',', $list_artist));
-			foreach ($artists as $artist) {
-				$write = new Show();
-				$write->id_song = $songupload->id;
-				$write->id_write = $artist;
-				$write->save();
-			}
-		}		
+		
 
 		return view('APP.song',['status','Đăng nhạc thành công !!']);
     }

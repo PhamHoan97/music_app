@@ -14,7 +14,7 @@ class CreateRltWrites extends Migration
     public function up()
     {
         Schema::create('rlt_writes', function (Blueprint $table) {
-            $table->increments('id_write');
+            $table->increments('id');
             $table->integer('id_account')->unsigned()->nullable();
             $table->integer('id_singer')->unsigned()->nullable();
             $table->integer('id_artist')->unsigned()->nullable();

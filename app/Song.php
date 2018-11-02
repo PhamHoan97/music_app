@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Song extends Model
 {
     protected $fillable = [
-        'song_name', 'song_image_path', 'view', 'like', 'post_time', 'description', 'lyrics', 'style'
+        'song_name' , 'song_path' , 'song_image_path', 'view', 'like', 'post_time', 'description' , 'style'
     ];
 
     /**

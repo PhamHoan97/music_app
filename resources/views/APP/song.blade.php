@@ -511,7 +511,6 @@
         	<div class="form-group upload--input ">
     			<label > <i class="fas fa-cloud-upload-alt"></i> 
     				<span class="upload--input__name"> Select file to upload </span>
-    				
 				<input type="file" class="upload_input" id="song" name="song">
     			</label>
     			
@@ -524,7 +523,6 @@
   			<div class="form-group upload--input ">
     			<label > <i class="fas fa-cloud-upload-alt"></i> 
     				<span class="upload--input__name"> Select image of song </span>
-    				
 				<input type="file" class="upload_input" id="image" name="image">
     			</label>
     			
@@ -571,12 +569,12 @@
 					</span>
     			</div>
     			<div class="the-loai-goi-y" style="margin-top: 5px;">
-    				<input type="hidden" class="form-control upload__author" id="list_style" name="list_style" value="0">
-    				<button type="button" class="tl--goi_y btn btn-outline-primary" value="1">Trữ tình</button>
-    				<button type="button" class= "tl--goi_y btn btn-outline-primary" value="2">EDM</button>
-    				<button type="button" class= "tl--goi_y btn btn-outline-primary" value="3">Quan họ</button>
-    				<button type="button" class= "tl--goi_y btn btn-outline-primary" value="4">Old school</button>
-    				<button type="button" class= "tl--goi_y btn btn-outline-primary" value="5">Hoàn khấc</button>
+    				<input type="text" class="form-control upload__author" id="list_style" name="list_style" value="0">
+    				<button type="button" class="tl--goi_y btn btn-outline-primary" value="Trữ tình">Trữ tình</button>
+    				<button type="button" class= "tl--goi_y btn btn-outline-primary" value="EDM">EDM</button>
+    				<button type="button" class= "tl--goi_y btn btn-outline-primary" value="Quan họ">Quan họ</button>
+    				<button type="button" class= "tl--goi_y btn btn-outline-primary" value="Old school">Old school</button>
+    				<button type="button" class= "tl--goi_y btn btn-outline-primary" value="Pop">Pop</button>
     				
     			</div>
   			</div>
@@ -586,10 +584,6 @@
     			<textarea class="form-control upload__lyrics ckeditor" id="exampleFormControlTextarea1" name="description" rows="3"></textarea>
   			</div>
 
-  			<div class="form-group">
-    			<label > <i class="fab fa-adversal"></i>  Your Lyric</label>
-    			<textarea class="form-control upload__lyrics ckeditor" id="exampleFormControlTextarea1" name="lyric" rows="3"></textarea>
-  			</div>
 		<!-- </form> -->
       </div>
       <div class="modal-footer">
